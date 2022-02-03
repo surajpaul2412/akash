@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://agrevolution.in/assets/frontend/images/favicon.png" type="image" sizes="16x16">
+    <title>DeHaat | DeHaat Partner</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- mdb css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <style>
+        .bg-success,.btn-success{background: #1a864a !important;}
+    </style>
+</head>
+<body class="bg-light">
+    <section class="bg-white container py-4" style="max-width: 450px;">
+        <div class="row">
+            <div class="col-10 py-3 bg-success"><img src="img/Logo-hindi.png" width="80px"></div>
+            <div class="col-1 py-3"></div>
+            <div class="col-1 py-3 bg-success"></div>
+        </div>
+        <div class="pt-4 px-3">
+            <h3 class="font-weight-bold text-success">नीचे दिए गए 5 सवालों का जवाब दें और तुरंत अपनी पात्रता देखें:</h3>
+            <form action="result.html" method="">
+                <!-- ques 1 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">1. आपका क्षेत्र कोनसा है?</h5>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text form-control" for="inputGroupSelect01">राज्य</label>
+                      </div>
+                      <select class="custom-select form-control" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                      </select>
+                    </div>
+                    <div class="form-outline mt-3">
+                        <input type="text" class="form-control form-control-md"/>
+                        <label class="form-label font-weight-bold">ज़िला</label>
+                    </div>
+                    <div class="form-outline mt-3">
+                        <input type="text" onkeypress="return onlyNumberKey(event)" maxlength="6" class="form-control form-control-md"/>
+                        <label class="form-label font-weight-bold">पिन कोड</label>
+                    </div>
+                </div>
+
+                <!-- ques 2 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">2. आपके पास कोनसे बिज़नेस लइसेंस हैं ? <sup class="text-danger">*</sup></h5>
+                    <div class="mt-3">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business1" value="option1">
+                          <label class="form-check-label" for="business1">बीज</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business2" value="option2">
+                          <label class="form-check-label" for="business2">कीटनाशक</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business3" value="option2">
+                          <label class="form-check-label" for="business3">उर्वरक</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business4" value="option2">
+                          <label class="form-check-label" for="business4">आउटपुट एग्रीगेटर</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business5" value="option2">
+                          <label class="form-check-label" for="business5">कोई भी नहीं</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ques 3 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">3. आप हर महीने कितनी राशि के एग्री-उत्पाद बेचते हैं ? <sup class="text-danger">*</sup></h5>
+                    <div class="mt-3">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="amount1" name="amount" class="custom-control-input">
+                          <label class="custom-control-label" for="amount1">< 50 हज़ार</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="amount2" name="amount" class="custom-control-input">
+                          <label class="custom-control-label" for="amount2">50 हज़ार - 2 लाख</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="amount3" name="amount" class="custom-control-input">
+                          <label class="custom-control-label" for="amount3">2 लाख - 5 लाख</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="amount4" name="amount" class="custom-control-input">
+                          <label class="custom-control-label" for="amount4">> 5 लाख</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ques 4 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">4. आपसे हर महीने कितने किसान जुड़ते हैं ? <sup class="text-danger">*</sup></h5>
+                    <div class="mt-3">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="kisan1" name="kisan" class="custom-control-input">
+                          <label class="custom-control-label" for="kisan1">< 100 किसान</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="kisan2" name="kisan" class="custom-control-input">
+                          <label class="custom-control-label" for="kisan2">101 - 200 किसान</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="kisan3" name="kisan" class="custom-control-input">
+                          <label class="custom-control-label" for="kisan3">201 - 500 किसान</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="kisan4" name="kisan" class="custom-control-input">
+                          <label class="custom-control-label" for="kisan4">> 500 किसान</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ques 5 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">5. क्या आपके पास पैन कार्ड है ? <sup class="text-danger">*</sup></h5>
+                    <div class="mt-3">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="panYes" name="panCard" class="custom-control-input" value="yes" required>
+                          <label class="custom-control-label" for="panYes">हाँ</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="panNo" name="panCard" class="custom-control-input" value="no" required>
+                          <label class="custom-control-label" for="panNo">नहीं</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-success rounded-pill text-capitalize mt-4 mx-auto w-50 d-block" type="submit">
+                    सबमिट
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+    <script>
+        function onlyNumberKey(evt) {
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+    </script>
+</body>
+</html>

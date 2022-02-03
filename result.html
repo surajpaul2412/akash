@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://agrevolution.in/assets/frontend/images/favicon.png" type="image" sizes="16x16">
+    <title>DeHaat | DeHaat Partner</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- mdb css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <style>
+        .font-60{font-size: 5rem;}
+        .bg-success,.btn-success{background: #1a864a !important;}
+        #breathing-button {
+            color: #1a864a;
+            animation: beat 1.5s infinite alternate;
+            transform-origin: center;
+        }
+        @keyframes beat{
+            to { transform: scale(1.4); }
+    </style>
+</head>
+<body class="bg-light">
+    <section class="bg-white container py-4" style="max-width: 450px;">
+        <div class="row">
+            <div class="col-10 py-3 bg-success">
+                <img src="img/Logo-hindi.png" width="80px">
+            </div>
+            <div class="col-1 py-3"></div>
+            <div class="col-1 py-3 bg-success">
+                
+            </div>
+        </div>
+        <div class="pt-5" align="center">
+            <h2 class="text-black font-weight-bold">आपका टोटल स्कोर है</h2>
+            <h1 class="font-weight-bold font-60" id="breathing-button">65</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 pt-3">
+                <p class="font-weight-bold">बधाई हो, आप देहात संचालक बनने के लिए योग्य हैं |<br/>अभी देहात बिज़नेस ऐप डाउनलोड कर अपना पंजीकरण पूरा करें और पाएं:</p>
+            </div>
+            <div class="col-12 px-0 bg-success">
+                <h5 class="text-white pt-3 pb-2 px-3">आपके चुनिंदा ग्राहकों के लिए लॉयल्टी कार्ड: </h5>
+            </div>
+            <div class="col-12">
+                <div class="px-2">
+                    <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                        <img src="img/icon5.png" width="40px">
+                        <span class="px-2 font-weight-bold">450+ उच्च बिक्री वाले एग्री उत्पाद </span>                    
+                    </div>
+                    <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                        <img src="img/icon6.png" width="40px">
+                        <span class="px-2 font-weight-bold">24 घंटे के भीतर निःशुल्क डिलीवरी</span>                    
+                    </div>
+                    <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                        <img src="img/icon7.png" width="40px">
+                        <span class="px-2 font-weight-bold">0% प्रीमियम आधारित सेहत बीमा</span>                    
+                    </div>
+                    <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                        <img src="img/icon8.png" width="40px">
+                        <span class="px-2 font-weight-bold">दुकान का डिजिटल एवं ज़मीनी प्रचार</span>                   
+                    </div>
+                    <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                        <img src="img/icon9.png" width="40px">
+                        <span class="px-2 font-weight-bold">20,000 रुपये की सिक्योरिटी पर 35,000 रुपये तक क्रेडिट</span>
+                    </div>
+                </div>
+                <div align="center">
+                    <a class="btn btn-primary rounded-pill text-capitalize mt-4 w-75" href="detail.html">
+                        ऐप डाउनलोड करें <img src="img/right-arrow.png" class="mx-2" width="22px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-4 d-flex align-items-center">
+            <div class="col-9 bg-white px-0">
+                <div class="bg-success py-3"></div>
+            </div>
+            <div class="col-3 pb-2 bg-white" align="right"><img src="https://campaigns.agrevolution.in/webinar/img/logo-hindi.png" width="75px"></div>
+        </div>
+    </section>
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+    <script>
+        function onlyNumberKey(evt) {
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+    </script>
+</body>
+</html>
