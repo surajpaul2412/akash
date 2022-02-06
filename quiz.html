@@ -23,7 +23,7 @@
     </style>
 </head>
 <body class="bg-light">
-    <section class="bg-white container py-4" style="max-width: 450px;">
+    <section class="bg-white container pb-4" style="max-width: 450px;">
         <div class="row">
             <div class="col-10 py-3 bg-success"><img src="img/Logo-hindi.png" width="80px"></div>
             <div class="col-1 py-3"></div>
@@ -167,6 +167,22 @@
                 return false;
             return true;
         }
+
+
+
+
+        // 
+        var link = window.location.href.split("?")[1];
+        var linkSplit = link.split("&");
+        let name = linkSplit[0];
+        let number = linkSplit[1];
+
+
+
+
+
+        console.log(name);
+        console.log(number);
     </script>
 </body>
 </html>
