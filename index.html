@@ -30,43 +30,257 @@
             <div class="col-1 py-3"></div>
             <div class="col-1 py-3 bg-success"></div>
         </div>
-        <div class="pt-4 px-2">
-            <h2 class="font-weight-bold text-black">देहात एक्सक्लूसिव पार्टनर प्रोग्राम</h2>
-            <p class="py-3">
-                देहात देश की सबसे बड़ी फुल-स्टैक एग्रीटेक कंपनी है जो <strong>200</strong> से अधिक ज़िलों में <strong>15</strong> लाख से अधिक किसानों से <strong>25+</strong> फ़सलें खरीदती है। इसके खरीदारों में <strong>500+</strong> बहुराष्ट्रीय और राष्ट्रीय कंपनियां शामिल हैं।<br/>
-                हम किसानों के लिए चुनिंदा विक्रेताओं का एक नेटवर्क बना रहे हैं, जिनके पास अच्छा इंफ्रास्ट्रक्चर, बाजार की प्रतिष्ठा, लाइसेंस और किसानों को इनपुट प्रदान करने के लिए सक्रिय किसान आधार है।
-            </p>
-        </div>
-        <div class="row">
-            <div class="col-12 px-4">
-                <div class="bg-success pt-3 px-3 pb-2 z-depth-2">
-                    <h5 class="font-weight-bold text-white">देहात संचालक बनने की आवश्यक पात्रता :</h5>
+
+        <!-- Section 1 -->
+        <section id="section1">
+            <div class="pt-4 px-2">
+                <h2 class="font-weight-bold text-black">देहात एक्सक्लूसिव पार्टनर प्रोग्राम</h2>
+                <p class="py-3">
+                    देहात देश की सबसे बड़ी फुल-स्टैक एग्रीटेक कंपनी है जो <strong>200</strong> से अधिक ज़िलों में <strong>15</strong> लाख से अधिक किसानों से <strong>25+</strong> फ़सलें खरीदती है। इसके खरीदारों में <strong>500+</strong> बहुराष्ट्रीय और राष्ट्रीय कंपनियां शामिल हैं।<br/>
+                    हम किसानों के लिए चुनिंदा विक्रेताओं का एक नेटवर्क बना रहे हैं, जिनके पास अच्छा इंफ्रास्ट्रक्चर, बाजार की प्रतिष्ठा, लाइसेंस और किसानों को इनपुट प्रदान करने के लिए सक्रिय किसान आधार है।
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-12 px-4">
+                    <div class="bg-success pt-3 px-3 pb-2 z-depth-2">
+                        <h5 class="font-weight-bold text-white">देहात संचालक बनने की आवश्यक पात्रता :</h5>
+                    </div>
+                    <div class="px-2">
+                        <div class="pt-4 font-12 d-flex justify-content-begin align-items-center">
+                            <img src="img/icon1.png" width="40px">
+                            <span class="px-2 font-weight-bold">अनिवार्य लाइसेंस और कंपनी पंजीकरण</span>                    
+                        </div>
+                        <div class="pt-4 font-12 d-flex justify-content-begin align-items-center">
+                            <img src="img/icon2.png" width="40px">
+                            <span class="px-2 font-weight-bold">सैकड़ों किसान नेटवर्क की सेवा में 3-5 किमी के दायरे में विशिष्ट भागीदार बनने की क्षमता</span>                    
+                        </div>
+                        <div class="pt-4 font-12 d-flex justify-content-begin align-items-center">
+                            <img src="img/icon3.png" width="40px">
+                            <span class="px-2 font-weight-bold">सरकारी अनुपालन और गैर बैंक चूककर्ता</span>                    
+                        </div>
+                        <div class="pt-4 font-12 d-flex justify-content-begin align-items-center">
+                            <img src="img/icon4.png" width="40px">
+                            <span class="px-2 font-weight-bold">नीचे दिए गए रेटिंग सिस्टम में 50/100 से अधिक स्कोर</span>                   
+                        </div>
+                    </div>
                 </div>
-                <div class="px-2">
-                    <div class="pt-4 font-12 d-flex justify-content-begin align-items-center">
-                        <img src="img/icon1.png" width="40px">
-                        <span class="px-2 font-weight-bold">अनिवार्य लाइसेंस और कंपनी पंजीकरण</span>                    
+                <div class="col-12 pt-3" align="center">
+                    <button class="btn btn-success rounded-pill text-capitalize mt-4 w-75" id="section1-btn">
+                        पात्रता चेक करें <img src="img/right-arrow.png" class="mx-2" width="22px">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section id="section2" class="pb-5" style="display: none;">
+            <div class="px-0 pb-5">
+                <img src="https://cdn.dutchuncles.in/wp-content/uploads/2021/04/DeHaat-disrupting-the-Indian-AgTech-space.jpg" width="100%" class="pt-3 px-0">
+                <div class="form-outline mt-4">
+                    <input type="text" id="name" class="form-control form-control-lg" required/>
+                    <label class="form-label font-weight-bold" for="name">अपना नाम बताएं</label>
+                </div>
+                <div class="form-outline mt-4">
+                    <input type="text" onkeypress="return onlyNumberKey(event)" id="number" maxlength="10" class="form-control form-control-lg" required/>
+                    <label class="form-label font-weight-bold" for="number">अपना फ़ोन नंबर बताएं</label>
+                </div>
+                <button class="btn btn-success rounded-pill text-capitalize mt-4" type="button" id="section2-btn">
+                    आगे बढ़ें <img src="img/right-arrow.png" class="mx-2" width="22px">
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section id="section3" style="display: none;">
+            <div class="pt-4 px-3">
+                <h3 class="font-weight-bold text-success">नीचे दिए गए 5 सवालों का जवाब दें और तुरंत अपनी पात्रता देखें:</h3>
+                <!-- ques 1 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">1. आपका क्षेत्र कोनसा है?</h5>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text form-control" for="state">राज्य</label>
+                      </div>
+                      <select class="custom-select form-control" id="state">
+                        <option value="">Choose...</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                      </select>
                     </div>
-                    <div class="pt-4 font-12 d-flex justify-content-begin align-items-center">
-                        <img src="img/icon2.png" width="40px">
-                        <span class="px-2 font-weight-bold">सैकड़ों किसान नेटवर्क की सेवा में 3-5 किमी के दायरे में विशिष्ट भागीदार बनने की क्षमता</span>                    
+                    <div class="form-outline mt-3">
+                        <input type="text" class="form-control form-control-md" id="district"/>
+                        <label class="form-label font-weight-bold" for="district">ज़िला</label>
                     </div>
-                    <div class="pt-4 font-12 d-flex justify-content-begin align-items-center">
-                        <img src="img/icon3.png" width="40px">
-                        <span class="px-2 font-weight-bold">सरकारी अनुपालन और गैर बैंक चूककर्ता</span>                    
+                    <div class="form-outline mt-3">
+                        <input type="text" onkeypress="return onlyNumberKey(event)" maxlength="6" class="form-control form-control-md" id="pincode"/>
+                        <label class="form-label font-weight-bold" for="pincode">पिन कोड</label>
                     </div>
-                    <div class="pt-4 font-12 d-flex justify-content-begin align-items-center">
-                        <img src="img/icon4.png" width="40px">
-                        <span class="px-2 font-weight-bold">नीचे दिए गए रेटिंग सिस्टम में 50/100 से अधिक स्कोर</span>                   
+                </div>
+
+                <!-- ques 2 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">2. आपके पास कोनसे बिज़नेस लइसेंस हैं ? <sup class="text-danger">*</sup></h5>
+                    <div class="mt-3">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business1" value="10">
+                          <label class="form-check-label" for="business1">बीज</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business2" value="10">
+                          <label class="form-check-label" for="business2">कीटनाशक</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business3" value="10">
+                          <label class="form-check-label" for="business3">उर्वरक</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business4" value="10">
+                          <label class="form-check-label" for="business4">आउटपुट एग्रीगेटर</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="business5" value="0">
+                          <label class="form-check-label" for="business5">कोई भी नहीं</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ques 3 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">3. आप हर महीने कितनी राशि के एग्री-उत्पाद बेचते हैं ? <sup class="text-danger">*</sup></h5>
+                    <div class="mt-3">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="amount1" name="amount" class="custom-control-input">
+                          <label class="custom-control-label" for="amount1">< 50 हज़ार</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="amount2" name="amount" class="custom-control-input">
+                          <label class="custom-control-label" for="amount2">50 हज़ार - 2 लाख</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="amount3" name="amount" class="custom-control-input">
+                          <label class="custom-control-label" for="amount3">2 लाख - 5 लाख</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="amount4" name="amount" class="custom-control-input">
+                          <label class="custom-control-label" for="amount4">> 5 लाख</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ques 4 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">4. आपसे हर महीने कितने किसान जुड़ते हैं ? <sup class="text-danger">*</sup></h5>
+                    <div class="mt-3">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="kisan1" name="kisan" class="custom-control-input">
+                          <label class="custom-control-label" for="kisan1">< 100 किसान</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="kisan2" name="kisan" class="custom-control-input">
+                          <label class="custom-control-label" for="kisan2">101 - 200 किसान</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="kisan3" name="kisan" class="custom-control-input">
+                          <label class="custom-control-label" for="kisan3">201 - 500 किसान</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="kisan4" name="kisan" class="custom-control-input">
+                          <label class="custom-control-label" for="kisan4">> 500 किसान</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ques 5 -->
+                <div class="my-5">
+                    <h5 class="text-black font-weight-bold">5. क्या आपके पास पैन कार्ड है ? <sup class="text-danger">*</sup></h5>
+                    <div class="mt-3">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="panYes" name="panCard" class="custom-control-input" value="yes">
+                          <label class="custom-control-label" for="panYes">हाँ</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="panNo" name="panCard" class="custom-control-input" value="no">
+                          <label class="custom-control-label" for="panNo">नहीं</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-success rounded-pill text-capitalize mt-4 mx-auto w-50 d-block" type="button" id="section3-btn">
+                    सबमिट
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 4 -->
+        <section id="section4" style="display: none;">
+            <img src="https://www.smartstateindia.com/wp-content/uploads/2021/10/DeHaat-Logo.jpg" class="px-0 pt-3" width="100%">
+            <div class="pt-5" align="center">
+                <h2 class="text-black font-weight-bold">आपका टोटल स्कोर है</h2>
+                <h1 class="text-success font-weight-bold font-60" id="breathing-button" style="font-size: 80px;"></h1>
+            </div>
+            <div class="row">
+                <div class="col-12 pt-3">
+                    <p class="font-weight-bold">बधाई हो, आप देहात संचालक बनने के लिए योग्य हैं |<br/>अभी देहात बिज़नेस ऐप डाउनलोड कर अपना पंजीकरण पूरा करें और पाएं:</p>
+                </div>
+                <div class="col-12 px-0 bg-success">
+                    <h5 class="text-white pt-3 pb-2 px-3">आपके चुनिंदा ग्राहकों के लिए लॉयल्टी कार्ड: </h5>
+                </div>
+                <div class="col-12">
+                    <div class="px-2">
+                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                            <img src="img/icon5.png" width="40px">
+                            <span class="px-2 font-weight-bold">450+ उच्च बिक्री वाले एग्री उत्पाद </span>                    
+                        </div>
+                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                            <img src="img/icon6.png" width="40px">
+                            <span class="px-2 font-weight-bold">24 घंटे के भीतर निःशुल्क डिलीवरी</span>                    
+                        </div>
+                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                            <img src="img/icon7.png" width="40px">
+                            <span class="px-2 font-weight-bold">0% प्रीमियम आधारित सेहत बीमा</span>                    
+                        </div>
+                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                            <img src="img/icon8.png" width="40px">
+                            <span class="px-2 font-weight-bold">दुकान का डिजिटल एवं ज़मीनी प्रचार</span>                   
+                        </div>
+                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
+                            <img src="img/icon9.png" width="40px">
+                            <span class="px-2 font-weight-bold">20,000 रुपये की सिक्योरिटी पर 35,000 रुपये तक क्रेडिट</span>
+                        </div>
+                    </div>
+                    <div align="center">
+                        <a class="btn btn-primary rounded-pill text-capitalize mt-4 w-75" href="detail.html">
+                            ऐप डाउनलोड करें <img src="img/right-arrow.png" class="mx-2" width="22px">
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 pt-3" align="center">
-                <a class="btn btn-success rounded-pill text-capitalize mt-4 w-75" href="detail.html">
-                    पात्रता चेक करें <img src="img/right-arrow.png" class="mx-2" width="22px">
-                </a>
+        </section>
+
+        <!-- SECTION 5 -->
+        <section id="section5" style="display: none;">
+            <img src="https://www.smartstateindia.com/wp-content/uploads/2021/10/DeHaat-Logo.jpg" class="px-0 pt-3" width="100%">
+            <div class="pt-5" align="center">
+                <h2 class="text-black font-weight-bold">आपका टोटल स्कोर है</h2>
+                <h1 class="text-success font-weight-bold font-60" id="breathing-button-no" style="font-size: 80px;"></h1>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-12 pt-3" align="center">
+                    <p class="font-weight-bold">माफ़ कीजिये, आप देहात संचालक बनने के योग्य नहीं हैं |</p>
+                </div>
+                <div class="col-12 px-0 mb-5 bg-success" align="center">
+                    <h5 class="text-white pt-3 pb-2 px-3">धन्यवाद !</h5>
+                </div>
+            </div>
+        </section>
+
         <div class="row pt-4 d-flex align-items-center">
             <div class="col-9 bg-white px-0">
                 <div class="bg-success py-3"></div>
@@ -78,5 +292,69 @@
 
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#section1-btn").click(function(){
+                $("#section1").hide();
+                $("#section2").show();
+            });
+
+            $('#section2-btn').click(function() {
+                var name = $("#name").val();
+                var number = $("#number").val();
+
+                if(name == "" || number == ""){
+                    alert("Please fill your Name and Number first !");
+                }else{
+                    $("#section2").hide();
+                    $("#section3").show();
+                }
+            });
+
+            
+            $('#section3-btn').click(function() {
+                var score = 0;
+                var state = $("#state").val();
+                var district = $("#district").val();
+                var pincode = $("#pincode").val();
+
+                if(state != ""){score = score + 5;}
+                if(district != ""){score = score + 5;}
+                if(pincode != ""){score = score + 5;}
+                if($('#business1').is(':checked')){score = score + 10;}
+                if($('#business2').is(':checked')){score = score + 10;}
+                if($('#business3').is(':checked')){score = score + 10;}
+                if($('#business4').is(':checked')){score = score + 10;}
+                if($('#amount1').is(':checked')){score = score + 5;}
+                if($('#amount2').is(':checked')){score = score + 10;}
+                if($('#amount3').is(':checked')){score = score + 15;}
+                if($('#amount4').is(':checked')){score = score + 20;}
+                if($('#kisan1').is(':checked')){score = score + 5;}
+                if($('#kisan2').is(':checked')){score = score + 10;}
+                if($('#kisan3').is(':checked')){score = score + 15;}
+                if($('#kisan4').is(':checked')){score = score + 20;}
+                if($('#panYes').is(':checked')){score = score + 5;}                
+
+                if(score >= 65){
+                    $("#section3").hide();
+                    $("#section4").show();
+                    $('#breathing-button').text(score);
+                }else{
+                    $("#section3").hide();
+                    $("#section5").show();
+                    $('#breathing-button-no').text(score);
+                }
+            });
+        });
+    </script>
+    <script>
+        function onlyNumberKey(evt) {
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+    </script>
 </body>
 </html>
