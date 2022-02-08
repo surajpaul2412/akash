@@ -42,7 +42,7 @@
         <section id="section1">
             <div class="pt-4 px-2">
                 <h1 class="font-weight-bold text-black" align="center">
-                    देहात एक्सक्लूसिव <span class="text-warning">पार्टनर प्रोग्राम</span>
+                    देहात <span class="text-warning">एक्सक्लूसिव पार्टनर</span> प्रोग्राम
                 </h1>
                 <p class="py-3 text-justify">
                     देहात देश की सबसे बड़ी फुल-स्टैक एग्रीटेक कंपनी है जो <strong class="text-warning">200</strong> से अधिक ज़िलों में <strong class="text-warning">15</strong> लाख से अधिक किसानों से <strong class="text-warning">25+</strong> फ़सलें खरीदती है। इसके खरीदारों में <strong class="text-warning">500+</strong> बहुराष्ट्रीय और राष्ट्रीय कंपनियां शामिल हैं।<br/>
@@ -135,6 +135,7 @@
                 <!-- ques 2 -->
                 <div class="my-5">
                     <h5 class="text-black font-weight-bold">2. आपके पास कोनसे बिज़नेस लइसेंस हैं ? <sup class="text-danger">*</sup></h5>
+                    <span class="text-danger font-weight-bold" id="error-business" style="display:none;">Please select any option</span>
                     <div class="mt-3">
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="checkbox" id="business1" value="10">
@@ -163,6 +164,7 @@
                 <!-- ques 3 -->
                 <div class="my-5">
                     <h5 class="text-black font-weight-bold">3. आप हर महीने कितनी राशि के एग्री-उत्पाद बेचते हैं ? <sup class="text-danger">*</sup></h5>
+                    <span class="text-danger font-weight-bold" id="error-amount" style="display:none;">Please select any option</span>
                     <div class="mt-3">
                         <div class="custom-control custom-radio">
                           <input type="radio" id="amount1" name="amount" class="custom-control-input">
@@ -186,6 +188,7 @@
                 <!-- ques 4 -->
                 <div class="my-5">
                     <h5 class="text-black font-weight-bold">4. आपसे हर महीने कितने किसान जुड़ते हैं ? <sup class="text-danger">*</sup></h5>
+                    <span class="text-danger font-weight-bold" id="error-kisan" style="display:none;">Please select any option</span>
                     <div class="mt-3">
                         <div class="custom-control custom-radio">
                           <input type="radio" id="kisan1" name="kisan" class="custom-control-input">
@@ -209,6 +212,7 @@
                 <!-- ques 5 -->
                 <div class="my-5">
                     <h5 class="text-black font-weight-bold">5. क्या आपके पास पैन कार्ड है ? <sup class="text-danger">*</sup></h5>
+                    <span class="text-danger font-weight-bold" id="error-pan" style="display:none;">Please select any option</span>
                     <div class="mt-3">
                         <div class="custom-control custom-radio custom-control-inline">
                           <input type="radio" id="panYes" name="panCard" class="custom-control-input" value="yes">
@@ -357,12 +361,58 @@
                     $("#section3").show();
                 }
             });
+
+            $('#business5').click(function() {
+                if($('#business5').is(':checked')){
+                    $('#business1').prop('checked', false);$("#business1").attr("disabled", true);
+                    $('#business2').prop('checked', false);$("#business2").attr("disabled", true);
+                    $('#business3').prop('checked', false);$("#business3").attr("disabled", true);
+                    $('#business4').prop('checked', false);$("#business4").attr("disabled", true);
+                }else{
+                    $("#business1").removeAttr("disabled");
+                    $("#business2").removeAttr("disabled");
+                    $("#business3").removeAttr("disabled");
+                    $("#business4").removeAttr("disabled");
+                }
+            });
             
             $('#section3-btn').click(function() {
                 var score = 0;
                 var state = $("#state").val();
                 var district = $("#district").val();
                 var pincode = $("#pincode").val();
+
+                if($('#business1').is(':checked') || $('#business2').is(':checked') || $('#business3').is(':checked') || $('#business4').is(':checked') || $('#business5').is(':checked')){
+                    $('#error-business').hide();
+                }else{
+                    $('#error-business').show();
+                    alert("Please fill all the mandatory fields!");
+                    return false;
+                }
+
+                if($('#amount1').is(':checked') || $('#amount2').is(':checked') || $('#amount3').is(':checked') || $('#amount4').is(':checked')){
+                    $('#error-amount').hide();
+                }else{
+                    $('#error-amount').show();
+                    alert("Please fill all the mandatory fields!");
+                    return false;
+                }
+
+                if($('#kisan1').is(':checked') || $('#kisan2').is(':checked') || $('#kisan3').is(':checked') || $('#kisan4').is(':checked')){
+                    $('#error-kisan').hide();
+                }else{
+                    $('#error-kisan').show();
+                    alert("Please fill all the mandatory fields!");
+                    return false;
+                }
+
+                if($('#panYes').is(':checked') || $('#panNo').is(':checked')){
+                    $('#error-pan').hide();
+                }else{
+                    $('#error-pan').show();
+                    alert("Please fill all the mandatory fields!");
+                    return false;
+                }
 
                 if(state != ""){score = score + 5;}
                 if(district != ""){score = score + 5;}
