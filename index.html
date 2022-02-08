@@ -90,7 +90,7 @@
                     <label class="form-label font-weight-bold" for="name">अपना नाम बताएं</label>
                 </div>
                 <div class="form-outline mt-4">
-                    <input type="text" onkeypress="return onlyNumberKey(event)" id="number" maxlength="10" class="form-control form-control-lg" required/>
+                    <input type="text" id="number" maxlength="10" class="form-control form-control-lg" required/>
                     <label class="form-label font-weight-bold" for="number">अपना फ़ोन नंबर बताएं</label>
                 </div>
                 <button class="btn btn-success rounded-pill text-capitalize mt-4" type="button" id="section2-btn">
@@ -127,7 +127,7 @@
                         <label class="form-label font-weight-bold" for="district">ज़िला</label>
                     </div>
                     <div class="form-outline mt-3">
-                        <input type="text" onkeypress="return onlyNumberKey(event)" maxlength="6" class="form-control form-control-md" id="pincode"/>
+                        <input type="text" maxlength="6" class="form-control form-control-md" id="pincode"/>
                         <label class="form-label font-weight-bold" for="pincode">पिन कोड</label>
                     </div>
                 </div>
@@ -429,7 +429,18 @@
                 if($('#kisan2').is(':checked')){score = score + 10;}
                 if($('#kisan3').is(':checked')){score = score + 15;}
                 if($('#kisan4').is(':checked')){score = score + 20;}
-                if($('#panYes').is(':checked')){score = score + 5;}                
+                if($('#panYes').is(':checked')){score = score + 5;}
+
+                // Submit Data:
+                let submitData = { "data":{"name": $("#name").val(),"mobile": $("#number").val(),"pincode": pincode,"score": score} }
+                $.ajax({
+                    url: 'https://sheetdb.io/api/v1/vmafxz70pa05t',
+                    type: 'post',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify(submitData)
+                });
+                // Submit End Data:
 
                 if(score >= 50){
                     $("#section3").hide();
@@ -442,15 +453,6 @@
                 }
             });
         });
-    </script>
-    <script>
-        // function onlyNumberKey(evt) {
-        //     var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-        //     if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-        //         return false;
-        //     return true;
-        // }
-
 
         $('#number').keyup(function () { 
             this.value = this.value.replace(/[^0-9\.]/g,'');
