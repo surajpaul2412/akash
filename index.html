@@ -444,12 +444,20 @@
         });
     </script>
     <script>
-        function onlyNumberKey(evt) {
-            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-                return false;
-            return true;
-        }
+        // function onlyNumberKey(evt) {
+        //     var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        //     if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+        //         return false;
+        //     return true;
+        // }
+
+
+        $('#number').keyup(function () { 
+            this.value = this.value.replace(/[^0-9\.]/g,'');
+        });
+        $('#pincode').keyup(function () { 
+            this.value = this.value.replace(/[^0-9\.]/g,'');
+        });
     </script>
 
     <!-- slider -->
