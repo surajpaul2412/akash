@@ -18,9 +18,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- mdb css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <style>
         .bg-success,.btn-success{background: #1a864a !important;}
-        .font-12{font-size: 14px;}
+        .font-12{font-size: 14px;}strong{font-weight: bold;}
+        .form-check-label,.custom-control-label{font-weight: 600;}
+        .text-warning{color: #f26538 !important;}
+        .bg-warning{background: #f26538 !important;}
+        .text-justify{text-align: justify;}
     </style>
 </head>
 <body class="bg-light">
@@ -28,21 +35,23 @@
         <div class="row">
             <div class="col-10 py-3 bg-success"><img src="img/Logo-hindi.png" width="80px"></div>
             <div class="col-1 py-3"></div>
-            <div class="col-1 py-3 bg-success"></div>
+            <div class="col-1 py-3 bg-warning"></div>
         </div>
 
         <!-- Section 1 -->
         <section id="section1">
             <div class="pt-4 px-2">
-                <h2 class="font-weight-bold text-black">देहात एक्सक्लूसिव पार्टनर प्रोग्राम</h2>
-                <p class="py-3">
-                    देहात देश की सबसे बड़ी फुल-स्टैक एग्रीटेक कंपनी है जो <strong>200</strong> से अधिक ज़िलों में <strong>15</strong> लाख से अधिक किसानों से <strong>25+</strong> फ़सलें खरीदती है। इसके खरीदारों में <strong>500+</strong> बहुराष्ट्रीय और राष्ट्रीय कंपनियां शामिल हैं।<br/>
+                <h2 class="font-weight-bold text-black" align="center">
+                    देहात एक्सक्लूसिव <span class="text-warning">पार्टनर प्रोग्राम</span>
+                </h2>
+                <p class="py-3 text-justify">
+                    देहात देश की सबसे बड़ी फुल-स्टैक एग्रीटेक कंपनी है जो <strong class="text-warning">200</strong> से अधिक ज़िलों में <strong class="text-warning">15</strong> लाख से अधिक किसानों से <strong class="text-warning">25+</strong> फ़सलें खरीदती है। इसके खरीदारों में <strong class="text-warning">500+</strong> बहुराष्ट्रीय और राष्ट्रीय कंपनियां शामिल हैं।<br/>
                     हम किसानों के लिए चुनिंदा विक्रेताओं का एक नेटवर्क बना रहे हैं, जिनके पास अच्छा इंफ्रास्ट्रक्चर, बाजार की प्रतिष्ठा, लाइसेंस और किसानों को इनपुट प्रदान करने के लिए सक्रिय किसान आधार है।
                 </p>
             </div>
             <div class="row">
                 <div class="col-12 px-4">
-                    <div class="bg-success pt-3 px-3 pb-2 z-depth-2">
+                    <div class="bg-success pt-3 px-3 pb-2 z-depth-2" align="center">
                         <h4 class="font-weight-bold text-white">देहात संचालक बनने की आवश्यक पात्रता</h4>
                     </div>
                     <div class="px-2">
@@ -75,7 +84,7 @@
         <!-- SECTION 2 -->
         <section id="section2" class="pb-5" style="display: none;">
             <div class="px-0 pb-5">
-                <img src="https://cdn.dutchuncles.in/wp-content/uploads/2021/04/DeHaat-disrupting-the-Indian-AgTech-space.jpg" width="100%" class="pt-3 px-0">
+                <img src="https://www.smartstateindia.com/wp-content/uploads/2021/10/DeHaat-Logo.jpg" width="100%" class="pt-3 px-0">
                 <div class="form-outline mt-4">
                     <input type="text" id="name" class="form-control form-control-lg" required/>
                     <label class="form-label font-weight-bold" for="name">अपना नाम बताएं</label>
@@ -220,45 +229,70 @@
 
         <!-- SECTION 4 -->
         <section id="section4" style="display: none;">
-            <img src="https://www.smartstateindia.com/wp-content/uploads/2021/10/DeHaat-Logo.jpg" class="px-0 pt-3" width="100%">
+            <!-- <img src="https://www.smartstateindia.com/wp-content/uploads/2021/10/DeHaat-Logo.jpg" class="px-0 pt-3" width="100%"> -->
             <div class="pt-5" align="center">
                 <h2 class="text-black font-weight-bold">आपका टोटल स्कोर है</h2>
-                <h1 class="text-success font-weight-bold font-60" id="breathing-button" style="font-size: 80px;"></h1>
+                <h1 class="text-success font-weight-bold font-60" id="breathing-button" style="font-size: 80px;">90</h1>
             </div>
             <div class="row">
-                <div class="col-12 pt-3">
+                <div class="col-12 pt-3" align="center">
                     <p class="font-weight-bold">बधाई हो, आप देहात संचालक बनने के लिए योग्य हैं |<br/>अभी देहात बिज़नेस ऐप डाउनलोड कर अपना पंजीकरण पूरा करें और पाएं:</p>
                 </div>
-                <div class="col-12 px-0 bg-success">
-                    <h5 class="text-white pt-3 pb-2 px-3">आपके चुनिंदा ग्राहकों के लिए लॉयल्टी कार्ड: </h5>
-                </div>
-                <div class="col-12">
-                    <div class="px-2">
-                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
-                            <img src="img/icon5.png" width="40px">
-                            <span class="px-2 font-weight-bold">450+ उच्च बिक्री वाले एग्री उत्पाद </span>                    
-                        </div>
-                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
-                            <img src="img/icon6.png" width="40px">
-                            <span class="px-2 font-weight-bold">24 घंटे के भीतर निःशुल्क डिलीवरी</span>                    
-                        </div>
-                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
-                            <img src="img/icon7.png" width="40px">
-                            <span class="px-2 font-weight-bold">0% प्रीमियम आधारित सेहत बीमा</span>                    
-                        </div>
-                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
-                            <img src="img/icon8.png" width="40px">
-                            <span class="px-2 font-weight-bold">दुकान का डिजिटल एवं ज़मीनी प्रचार</span>                   
-                        </div>
-                        <div class="pt-4 font-12 d-flex justify-content-left align-items-center">
-                            <img src="img/icon9.png" width="40px">
-                            <span class="px-2 font-weight-bold">20,000 रुपये की सिक्योरिटी पर 35,000 रुपये तक क्रेडिट</span>
+                <div class="slider-6 mb-4 mt-2">
+                    <div class="slide px-4">
+                        <div class="card bg-white p-4">
+                            <div class="font-12 d-flex justify-content-left align-items-center">
+                                <img src="img/icon5.png" width="40px">
+                                <span class="px-2 font-weight-bold">450+ उच्च बिक्री वाले एग्री उत्पाद </span>                    
+                            </div>
                         </div>
                     </div>
-                    <div align="center">
-                        <a class="btn btn-primary rounded-pill text-capitalize mt-4 w-75" href="detail.html">
-                            ऐप डाउनलोड करें <img src="img/right-arrow.png" class="mx-2" width="22px">
-                        </a>
+                    <div class="slide px-4">
+                        <div class="card bg-white p-4">
+                            <div class="font-12 d-flex justify-content-left align-items-center">
+                                <img src="img/icon6.png" width="40px">
+                                <span class="px-2 font-weight-bold">24 घंटे के भीतर निःशुल्क डिलीवरी</span>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide px-4">
+                        <div class="card bg-white p-4">
+                            <div class="font-12 d-flex justify-content-left align-items-center">
+                                <img src="img/icon7.png" width="40px">
+                                <span class="px-2 font-weight-bold">0% प्रीमियम आधारित सेहत बीमा</span>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide px-4">
+                        <div class="card bg-white p-4">
+                            <div class="font-12 d-flex justify-content-left align-items-center">
+                                <img src="img/icon8.png" width="40px">
+                                <span class="px-2 font-weight-bold">दुकान का डिजिटल एवं ज़मीनी प्रचार</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide px-4">
+                        <div class="card bg-white p-4">
+                            <div class="font-12 d-flex justify-content-left align-items-center">
+                                <img src="img/icon9.png" width="40px">
+                                <span class="px-2 font-weight-bold">20,000 रुपये की सिक्योरिटी पर 35,000 रुपये तक क्रेडिट</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-3">
+                <div class="card z-depth-4 pt-3 bg-white">
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="https://partners.agrevolution.in/files/chacha.png" width="100%">
+                        </div>
+                        <div class="col-7 d-flex align-items-center justify-content-center" align="center">
+                            <div class="d-block my-auto">
+                                <a href="https://play.google.com/store/apps/details?id=com.intspvt.app.dehaat2" class="btn btn-success font-weight-normal rounded-pill text-capitalize">ऐप डाउनलोड करें</a>
+                                <h3 class="text-success font-weight-bold mt-2">धन्यवाद !</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -266,17 +300,29 @@
 
         <!-- SECTION 5 -->
         <section id="section5" style="display: none;">
-            <img src="https://www.smartstateindia.com/wp-content/uploads/2021/10/DeHaat-Logo.jpg" class="px-0 pt-3" width="100%">
+            <!-- <img src="https://www.smartstateindia.com/wp-content/uploads/2021/10/DeHaat-Logo.jpg" class="px-0 pt-3" width="100%"> -->
             <div class="pt-5" align="center">
                 <h2 class="text-black font-weight-bold">आपका टोटल स्कोर है</h2>
-                <h1 class="text-success font-weight-bold font-60" id="breathing-button-no" style="font-size: 80px;"></h1>
+                <h1 class="text-warning font-weight-bold font-60" id="breathing-button-no" style="font-size: 80px;"></h1>
             </div>
             <div class="row">
                 <div class="col-12 pt-3" align="center">
                     <p class="font-weight-bold">माफ़ कीजिये, आप देहात संचालक बनने के योग्य नहीं हैं |</p>
                 </div>
-                <div class="col-12 px-0 mb-5 bg-success" align="center">
-                    <h5 class="text-white pt-3 pb-2 px-3">धन्यवाद !</h5>
+                <div class="container">
+                    <div class="card z-depth-4 pt-3 bg-white">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="https://partners.agrevolution.in/files/chacha.png" width="100%">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-center" align="center">
+                                <div class="d-block my-auto">
+                                    <a href="https://partners.agrevolution.in" class="btn btn-success font-weight-normal rounded-pill text-capitalize px-5">Partners</a>
+                                    <h3 class="text-success font-weight-bold mt-2">धन्यवाद !</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -311,7 +357,6 @@
                     $("#section3").show();
                 }
             });
-
             
             $('#section3-btn').click(function() {
                 var score = 0;
@@ -355,6 +400,43 @@
                 return false;
             return true;
         }
+    </script>
+
+    <!-- slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $('.slider-6').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1008,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
     </script>
 </body>
 </html>
