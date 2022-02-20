@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://agrevolution.in/assets/frontend/images/favicon.png" type="image" sizes="16x16">
+    <title>DeHaat | DeHaat Partner</title>
+    <!-- Font Awesome -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/> -->
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/> -->
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet"/>
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
+    <!-- Google Fonts -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"> -->
+    <!-- mdb css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+	<!-- slick slider -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<style>
+		/*home page*/
+		html,body{
+		    font-family: 'Roboto', sans-serif;
+		    scroll-behavior: smooth;
+		}
+		.mt-n1{color: #fff;}
+		.heart {
+		   animation: heartbeat var(--animation-speed) infinite;
+		   user-select: none;
+		}
+		.w-md-84{
+		    width: 84% !important;
+		}
+		@keyframes heartbeat {
+		   0% {
+		      transform: scale(0.75);
+		   }
+
+		   20% {
+		      transform: scale(1);
+		   }
+
+		   40% {
+		      transform: scale(0.75);
+		   }
+
+		   60% {
+		      transform: scale(1);
+		   }
+
+		   80% {
+		      transform: scale(0.75);
+		   }
+
+		   100% {
+		      transform: scale(0.75);
+		   }
+		}
+		.counter {
+		animation-duration: 1s;
+		animation-delay: 0s;
+		}
+		#counter{
+		background-image: linear-gradient(
+		115deg
+		, rgb(9 97 47) 33.33%, rgb(18 129 65), 33.33%, rgb(18 129 65), 66.66%, rgb(21 179 88) 66.66%);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		}
+		.bg-success{
+		background: #128141 !important;
+		}
+		.text-success{color: #128141 !important;}
+		#home{
+		height: 90vh;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.97) 100%), url('files/Slider1_web.svg') no-repeat center center/cover;
+		}
+		.border-2{
+		border-color: rgb(129, 129, 129);
+		border-style: dashed;
+		border-width: 2px;
+		width: 45%;
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 78%;
+		}
+		.border-3{
+		border-color: rgb(129, 129, 129);
+		border-style: dashed;
+		border-width: 2px;
+		width: 45%;
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 78%;
+		}
+		#text-banner{
+		background: #095a2c;
+		background-attachment: fixed;
+		}
+		.para-content{
+		line-height: 1.5;padding: 60px 40px;
+		}
+		section h2{
+		    font-weight: bold;
+		    color: #128141;
+		    padding: 30px 0 5px 0;
+		}
+		.scroll {
+		    flex: 1;
+		    display: flex;
+		    flex-wrap: nowrap;
+		    overflow-x: auto;
+		    overflow-y: hidden;
+		}
+		.slick-slide {
+		    margin: 10px
+		}
+		.slick-slide img {
+		    width: 100%;
+		    border: 0px solid #fff
+		}
+		.partner-items div img{
+		    border-radius: 20px;
+		} 
+		.partner-items, .logo-items, .video-link-items{
+		    overflow-x: hidden;
+		}
+		.bg-yellow{
+		    background: #FFE79D;
+		}
+		.border-rad-14{
+		    border-radius: 14px;
+		}
+		.font-12{
+		    font-size: 12px;
+		}
+		.modal-dialog .modal-content{
+		    box-shadow: none !important;
+		}
+		.modal-content{
+		    background-color: transparent !important;
+		}
+		.desktop-d-none{
+		    display: none !important;
+		}
+		#float-button{
+		    position: fixed;
+		    bottom: 0%;
+		}
+		.card-head-txt{
+		    font-size: 0.8rem;
+		}
+		.card-bottom-txt{
+		    font-size: 1rem;
+		    font-weight: bold;
+		}
+		.close-float-card{
+		    position: absolute;top: -4%;z-index: 9;right: -2%;
+		}
+		.close-float-card-img{
+		    background: #fff;border-radius: 50%;padding: 6px;box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+		}
+		.close-float-card-reg{
+		    position: absolute;top: -2.8%;z-index: 9;right: -2%;
+		}
+		.close-float-card-img-reg{
+		    background: #fff;border-radius: 50%;padding: 6px;box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+		}
+		.card[class*=border]{
+		    border: none;
+		}
+		.text-green2 {
+		    font-family: 'Roboto', sans-serif;
+		    color: #27AE60;
+		    font-weight: 400;
+		}
+		.bg-green-dark {
+		    background: #06592F;
+		}
+		.bg-brown {
+		    background: #C26639;
+		    border-radius: 14px;
+		}
+		.font-13{
+		    font-size: 12px;
+		}
+		#float-card {
+		    position: fixed;
+		    bottom: 2%;
+		    right: 5%;
+		    z-index: 899;
+		}
+		.map-ul span{
+		  color: #128141;
+		  font-weight: 600;
+		  font-size: 1.2rem;
+		}
+		.modal-body{
+		    padding: 0px !important;
+		}
+		#carousel {
+		  width:100%;
+		  height:70vh;
+		  position:relative;
+		  clear:both;
+		  overflow:hidden;
+		  background:#FFF;
+		}
+		#carousel img {
+		  visibility:hidden;
+		  cursor:pointer;
+		}
+		.sticky-footer{
+		  position: fixed;width:100%;
+		  bottom: 0;
+		  z-index: 9998;
+		}
+		/* mobile only view */
+		@media all and (max-width: 768px){
+		    #home{
+		        height: 52vh;
+		        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.97) 100%), url('files/Slider1_web.svg') no-repeat center center/cover;
+		    }
+		    .w-md-84{
+		        width: 100% !important;
+		    }
+		    .w-md-25{
+		        width: 60%;
+		    }
+		    .font-1{
+		        font-size: 22px;
+		    }
+		    .para-content{
+		        padding: 40px 20px !important;
+		    }
+		    .width-scroll{
+		        flex: 0 0 79%;
+		        max-width: 79%;
+		    }
+		    .changebg > h6, .changebg-pink > h6, .changebg-violet > h6{
+		        padding-top: 5px !important;
+		    }
+		    .mobile-d-none{
+		        display: none;
+		    }
+		    .desktop-d-none{
+		        display: block !important;
+		    }
+		    .carousel3-mobile .box{
+		      width: 280px;
+		    }
+		    .pb-xs-5{
+		      padding-bottom: 5rem !important;
+		    }
+		    .media-font{
+		        font-size: 1.4rem;
+		    }
+		}
+		/* desktop only view */
+		@media all and (min-width: 768px){   
+		}
+		/*MAP*/
+		@-webkit-keyframes blinker {
+		    from {
+		        opacity: 1.0;
+		    }
+		    to {
+		        opacity: 0.0;
+		    }
+		}
+		.blink {
+		    text-decoration: blink;
+		    -webkit-animation-name: blinker;
+		    -webkit-animation-duration: 0.6s;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-timing-function: ease-in-out;
+		    -webkit-animation-direction: alternate;
+		}
+		@media all and (max-width:1200px) and (min-width:1000px) {
+		    #delhi {
+		        position: absolute;
+		        top: 25%;
+		        left: 36% !important;
+		    }
+		    #rajasthan {
+		        position: absolute;
+		        top: 33% !important;
+		        left: 29% !important;
+		    }
+		    #gujrat {
+		        position: absolute;
+		        top: 46% !important;
+		        left: 25% !important;
+		    }
+		    #bengal {
+		        position: absolute;
+		        top: 45% !important;
+		        left: 58% !important;
+		    }
+		}
+		@media all and (max-width:1000px) and (min-width: 770px) {
+		    #delhi {
+		        position: absolute;
+		        top: 25%;
+		        left: 31% !important;
+		    }
+		    #rajasthan {
+		        position: absolute;
+		        top: 33% !important;
+		        left: 23% !important;
+		    }
+		    #gujrat {
+		        position: absolute;
+		        top: 46% !important;
+		        left: 15% !important;
+		    }
+		    #mp {
+		        position: absolute;
+		        top: 45% !important;
+		        left: 35% !important;
+		    }
+		    #bengal {
+		        position: absolute;
+		        top: 45% !important;
+		        left: 62% !important;
+		    }
+		}
+		@media all and (max-width:770px) and (min-width: 450px) {
+		    #delhi {
+		        position: absolute;
+		        top: 26% !important;
+		        left: 30% !important;
+		    }
+		    #up {
+		        position: absolute;
+		        top: 31% !important;
+		        left: 41% !important;
+		    }
+		    #rajasthan {
+		        position: absolute;
+		        top: 31% !important;
+		        left: 17% !important;
+		    }
+		    #gujrat {
+		        position: absolute;
+		        top: 41% !important;
+		        left: 14% !important;
+		    }
+		    #mp {
+		        position: absolute;
+		        top: 42% !important;
+		        left: 30% !important;
+		    }
+		    #bengal {
+		        position: absolute;
+		        top: 42% !important;
+		        left: 63% !important;
+		    }
+		    #bihar {
+		        position: absolute;
+		        top: 35% !important;
+		        left: 58% !important;
+		    }
+		    #orrisa{
+		        position: absolute;
+		        top: 42% !important;
+		        left: 50% !important;
+		    }
+		}
+
+		@media all and (max-width:450px) and (min-width: 200px) {
+		    #delhi {
+		        position: absolute;
+		        top: 25%;
+		        left: 27% !important;
+		        height: 35px !important;
+		        width: 35px !important;
+		    }
+		    #up {
+		        position: absolute;
+		        top: 31% !important;
+		        left: 40% !important;
+		        height: 35px !important;
+		        width: 35px !important;
+		    }
+		    #rajasthan {
+		        position: absolute;
+		        top: 33% !important;
+		        left: 17% !important;
+		        height: 35px !important;
+		        width: 35px !important;
+		    }
+		    #gujrat {
+		        position: absolute;
+		        top: 44% !important;
+		        left: 10% !important;
+		        height: 35px !important;
+		        width: 35px !important;
+		    }
+		    #mp {
+		        position: absolute;
+		        top: 43% !important;
+		        left: 28% !important;
+		        height: 35px !important;
+		        width: 35px !important;
+		    }
+		    #bengal {
+		        position: absolute;
+		        top: 45% !important;
+		        left: 62% !important;
+		        height: 35px !important;
+		        width: 35px !important;
+		    }
+		    #orrisa {
+		        height: 33px !important;
+		        width: 33px !important;
+		    }
+		    #bihar {
+		        height: 33px !important;
+		        width: 33px !important;
+		    }
+		}
+		    @media only screen and (min-width: 745px) {
+		        .col-md-2-media{flex: 0 0 20% !important;max-width: 20% !important;}
+		    }
+		/*dehaat-terminal*/
+		h6{font-size: 0.8rem;}
+		@media all and (max-width:760px){
+            #image-1{display:none!important}
+            #image-2{display:block}
+        }
+        @media all and (min-width:768px){
+            #image-2{display:none!important}
+        }
+        .responsive-iframe{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+        .responsive-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+        section{overflow-x: hidden;}
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link{background-color: #128141;}
+        .text-success{color: #128141 !important;}
+        .bg-success{background:#128141 !important;}
+		.nav-link.active{color:#fff !important;}
+		.text-black{color: #000 !important;}
+		.btn-collapse{background:#128141;border-radius: 28px;color: #fff !important; }
+	</style>
+</head>
+<body>
+
+
+
+
+	<section class="home">
+	    <!-- navbar -->
+	    <section class="bg-white sticky-top border-bottom shadow">
+	        <div class="container py-1">
+	            <div class="row">
+	                <div class="col-5 py-0" align="left">
+	                    <a class="navbar-brand" href="index.html"><img src="/files/icons/logo-hindi.svg" width="80px" class="img-fluid"></a>
+	                </div>
+	                <div class="col-7 d-flex align-items-center justify-content-end">
+	                    <a href="https://wa.link/k2draz" target="_blank" class="text-white px-2"><img src="files/whatsapp.svg" width="50px"></a>
+	                    <a href="tel:18001036110" class="text-white px-2"><img src="files/telephone.svg" width="38px"></a>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	    <!-- chacha banner  -->
+	    <section id="home" class="home" style="position: relative;">
+	        <div class="container" align="center">
+	            <div style="position: absolute; bottom: 0; left: 0; right: 0;">
+	                <img src="files/chacha.png" class="img-fluid img-chacha w-md-25" />
+	                <div>
+	                    <div class="font-weight-bold text-white bg-success py-2 emoji-font" style="font-size: 24px">सभी कृषि व्यापारियों को देहात का नमस्कार 🙏</div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	    <!-- map counter-->
+	    <section class="mt-5">
+	        <div class="container">
+	            <div class="row">
+	                <h2 align="center" style="font-size: 24px">
+	                    आज देहात अपने मजबूत नेटवर्क एवं पहुंच के द्वारा देश के किसानों एवं कृषि व्यापारियों की आय एवं आय के स्रोतों को बढ़ा रहा है।
+	                </h2>
+	                <div class="col-md-4 col-12" id="counter1">
+	                    <div class="row py-4">
+	                        <div class="col-md-6 col-6 py-3">
+	                            <div class="d-flex px-3 justify-content-beginning align-items-center bg-success w-100 py-2 border-rad-14">
+	                                <div>
+	                                    <img src="/files/icons/map.svg" class="rounded-circle p-1" width="46px" style="background:#90dfaa;">
+	                                </div>
+	                                <div class="pl-2">
+	                                    <h4 class="font-weight-bold counter-text media-font text-white">
+	                                        <span class="counter"> 11</span>
+	                                    </h4>
+	                                    <h6 class="text-white font-weight-bold"> राज्य</h6>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-6 col-6 py-3">
+	                            <div class="d-flex px-3 justify-content-beginning align-items-center bg-success w-100 py-2 border-rad-14">
+	                                <div><img src="/files/icons/farmer.svg" class="rounded-circle p-1" width="46px" style="background: #90dfaa;"></div>
+	                                <div class="pl-2">
+	                                    <h4 class="text-white font-weight-bold counter-text media-font">
+	                                        <span class="counter">7</span> <span>L +</span>
+	                                    </h4>
+	                                    <h6 class="text-white font-weight-bold"> किसान</h6>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-6 col-6 py-3">
+	                            <div class="d-flex px-3 justify-content-beginning align-items-center bg-success w-100 py-2 border-rad-14">
+	                                <div><img src="/files/icons/4.svg" class="rounded-circle p-1" width="46px" height="50px" style="background: #90dfaa;"></div>
+	                                <div class="pl-2">
+	                                    <h4 class="text-white font-weight-bold counter-text media-font">
+	                                        <span class="counter">4</span> <span>K +</span>
+	                                    </h4>
+	                                    <h6 class="text-white font-weight-bold"> देहात केंद्र</h6>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-6 col-6 py-3">
+	                            <div class="d-flex px-3 justify-content-beginning align-items-center bg-success w-100 py-2 border-rad-14">
+	                                <div><img src="files/warehouse.png" class="rounded-circle p-1" width="46px" style="background: #90dfaa;"></div>
+	                                <div class="pl-2">
+	                                    <h4 class="text-white font-weight-bold counter-text media-font">
+	                                        <span class="counter">3</span> <span>L +</span>
+	                                    </h4>
+	                                    <h6 class="text-white font-weight-bold"> गोदाम क्षमता</h6>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-12 col-6 py-3">
+	                            <div class="d-flex px-3 justify-content-beginning align-items-center bg-success w-100 py-2 border-rad-14">
+	                                <div><img src="/files/icons/8.svg" class="rounded-circle p-1" width="46px" style="background: #90dfaa;"></div>
+	                                <div class="pl-2">
+	                                    <h4 class="text-white font-weight-bold counter-text media-font">
+	                                        <span class="counter">3</span> <span>L +</span>
+	                                    </h4>
+	                                    <h6 class="text-white font-weight-bold"> खरीदे गए उत्पाद</h6>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-12 col-6 py-3">
+	                            <div class="d-flex px-3 justify-content-beginning align-items-center bg-success w-100 py-2 border-rad-14">
+	                                <div><img src="files/cust.svg" class="rounded-circle p-1" width="46px" style="background: #90dfaa;"></div>
+	                                <div class="pl-2">
+	                                    <h4 class="text-white font-weight-bold counter-text media-font">
+	                                        <span class="counter">200</span> <span>+</span>
+	                                    </h4>
+	                                    <h6 class="text-white font-weight-bold"> कॉर्पोरेट खरीदार</h6>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-12 col-12 py-3">
+	                            <div class="d-flex px-3 justify-content-beginning align-items-center bg-success w-100 py-2 border-rad-14">
+	                                <div><img src="files/seeds.svg" class="rounded-circle p-1" width="46px" style="background: #90dfaa;"></div>
+	                                <div class="pl-2">
+	                                    <h4 class="text-white font-weight-bold counter-text media-font">
+	                                        <span class="counter">70</span> <span>+</span>
+	                                    </h4>
+	                                    <h6 class="text-white font-weight-bold"> खाद, बीज, कीटनाशक सप्लायर</h6>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-8 col-12 text-center">
+	                    <div class="position-relative">
+	                        <!-- map -->
+	                        <img src="files/india.svg" class="img-fluid" style="position: relative; z-index: -1;">
+	                        <!-- uttarpradesh -->
+	                        <div id="up" style="position: absolute; top: 33%; left: 41%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> उत्तर प्रदेश </p>
+	                        </div>
+	                        <!-- bihar -->
+	                        <div id="bihar" style="position: absolute; top: 37%; left: 57%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> बिहार </p>
+	                        </div>
+	                        <!-- odisha -->
+	                        <div id="orrisa" style="position: absolute; top: 44%; left: 55%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> झारखंड </p>
+	                        </div>
+	                        <div id="orrisa" style="position: absolute; top: 54%; left: 54%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> ओडिशा </p>
+	                        </div>
+	                        <!-- bengal -->
+	                        <div id="bengal" style="position: absolute; top: 46%; left: 60%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> पश्चिम बंगाल </p>
+	                        </div>
+	                        <!-- maharashtra -->
+	                        <div id="maharashtra" style="position: absolute; top: 55%; left: 22%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> महाराष्ट्र </p>
+	                        </div>
+	                        <!-- rajasthan -->
+	                        <div id="rajasthan" style="position: absolute; top: 34%; left: 24%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> राजस्थान </p>
+	                        </div>
+	                        <!-- madhya pradesh -->
+	                        <div id="mp" style="position: absolute; top: 45%; left: 33%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> मध्य प्रदेश </p>
+	                        </div>
+	                        <!-- new entry -->
+	                        <div id="orrisa" style="position:absolute;top: 50%;left: 45%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> छत्तीसगढ़ </p>
+	                        </div>
+	                        <div id="orrisa" style="position:absolute;top: 26%;left: 30%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> हरियाणा </p>
+	                        </div>
+	                        <div id="orrisa" style="position:absolute;top: 46%;left: 17%;">
+	                            <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid blink"
+	                                height="10px" width="10px">
+	                            <p class="font-weight-bold mt-n1" style="font-size: 10px;"> गुजरात </p>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	    <!-- icon slider -->
+	    <section class="mt-5">
+	        <h2 align="center">कृषि उत्पादों की खरीद- बिक्री कर अधिक कमाई का मौका</h2>
+	        <div class="container">
+	            <div class="py-4" id="categories">
+	                <div class="row scroll">
+	                    <div class="col-md-4 col-12 width-scroll" style="border-right: 1px solid rgb(235, 232, 232)">
+	                        <div class="row my-4">
+	                            <div class="col-4">
+	                                <img src="files/icons/1.png" class="img-fluid w-75 ">
+	                            </div>
+	                            <div class="col-8 changebg ml-n4">
+	                                <h6 class="font-weight-bold pt-4" style="color: #128141;"> पैसे के अभाव से निजात</h6>
+	                            </div>
+	                        </div>
+	                        <div class="row my-4">
+	                            <div class="col-4">
+	                                <img src="files/icons/8.svg" class="img-fluid w-75">
+	                            </div>
+	                            <div class="col-8 changebg ml-n4">
+	                                <h6 class="font-weight-bold pt-3" style="color: #128141;"> आर्डर एवं भुगतान की समस्या से छुटकारा
+	                                </h6>
+	                            </div>
+	                        </div>
+	                        <div class="row my-4">
+	                            <div class="col-4">
+	                                <img src="files/icons/3.png" class="img-fluid w-75">
+	                            </div>
+	                            <div class="col-8 changebg ml-n4">
+	                                <h6 class="font-weight-bold pt-4" style="color: #128141;"> खाता-बही के झंझट से छुटकारा </h6>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-4 col-12 width-scroll" style="border-right: 1px solid rgb(235, 232, 232)">
+	                        <div class="row my-4">
+	                            <div class="col-4">
+	                                <img src="files/icons/2.svg" class="img-fluid  w-75">
+	                            </div>
+	                            <div class="col-8 changebg-pink ml-n4">
+	                                <h6 class="font-weight-bold pt-3" style="color: #128141;">
+	                                    दुकान के प्रचार की समस्या से छुटकारा
+	                                </h6>
+	                            </div>
+	                        </div>
+	                        <div class="row my-4">
+	                            <div class="col-4">
+	                                <img src="files/icons/5.svg" class="img-fluid w-75">
+	                            </div>
+	                            <div class="col-8 changebg-violet ml-n4">
+	                                <h6 class="font-weight-bold pt-4" style="color: #128141;"> अतिरिक्त इन्वेंटरी से निजात </h6>
+	                            </div>
+	                        </div>
+	                        <div class="row my-4">
+	                            <div class="col-4">
+	                                <img src="files/icons/4.svg" class="img-fluid w-75">
+	                            </div>
+	                            <div class="col-8 changebg ml-n4">
+	                                <h6 class="font-weight-bold pt-4" style="color: #128141;">
+	                                    व्यापार बढ़ाने के सुनिश्चित अवसर
+	                                </h6>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-4 col-12 width-scroll">
+	                        <div class="row my-4">
+	                            <div class="col-4">
+	                                <img src="files/icons/7.svg" class="img-fluid w-75">
+	                            </div>
+	                            <div class="col-8 changebg ml-n4">
+	                                <h6 class="font-weight-bold pt-0" style="color: #128141;"> माल डिलीवरी एवं एकत्र करने की समस्या का समाधान</h6>
+	                            </div>
+	                        </div>
+	                        <div class="row my-4">
+	                            <div class="col-4">
+	                                <img src="files/icons/6.svg" class="img-fluid w-75">
+	                            </div>
+	                            <div class="col-8 changebg ml-n4">
+	                                <h6 class="font-weight-bold pt-3" style="color: #128141;">
+	                                    कृषि उत्पादों की खरीद- बिक्री पर अधिक कमाई
+	                                </h6>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	    <!-- partner -->
+	    <section>
+	        <h2 align="center">देहात पार्टनर</h2>
+	        <div class="text-dark font-weight-bold px-3" align="center"> देहात पार्टनर बनकर अब तक 11 राज्यों में हजारो कृषि उत्पाद विक्रेताओं को मिला है आय में वृद्धि और क्षमताओं में बढ़ोतरी का मौका</div>
+	        <div class="container mt-4">
+	            <div class="partner-items">
+	                <div>
+	                    <a data-toggle="modal" data-target="#partner1">
+	                    <img src="files/partner/partner1.jpeg" width="100%" class="border-rad-14">
+	                    </a>
+	                </div>
+	                <div>
+	                    <a data-toggle="modal" data-target="#partner2">
+	                    <img src="files/partner/partner2.jpeg" width="100%" class="border-rad-14">
+	                    </a>
+	                </div>
+	                <div>
+	                    <a data-toggle="modal" data-target="#partner3">
+	                    <img src="files/partner/partner3.jpeg" width="100%" class="border-rad-14">
+	                    </a>
+	                </div>
+	                <div>
+	                    <a data-toggle="modal" data-target="#partner4">
+	                    <img src="files/partner/partner4.jpeg" width="100%" class="border-rad-14">
+	                    </a>
+	                </div>
+	                <div>
+	                    <a data-toggle="modal" data-target="#partner1">
+	                    <img src="files/partner/partner1.jpeg" width="100%" class="border-rad-14">
+	                    </a>
+	                </div>
+	                <div>
+	                    <a data-toggle="modal" data-target="#partner2">
+	                    <img src="files/partner/partner2.jpeg" width="100%" class="border-rad-14">
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	    <!-- slider animation mockup -->
+	    <section class="container mt-5">
+	        <h2 align="center">आपके व्यवसाय को मैनेज करने के लिए सर्वश्रेष्ठ देहात पार्टनर ऐप</h2>
+	        <div id="carousel">
+	            <img src="files/mockup/mockup1.svg" id="item-1" width="240px"/>
+	            <img src="files/mockup/mockup2.svg" id="item-2" width="240px"/>
+	            <img src="files/mockup/mockup3.svg" id="item-3" width="240px"/>
+	            <img src="files/mockup/mockup4.svg" id="item-4" width="240px"/>
+	            <img src="files/mockup/mockup5.svg" id="item-5" width="240px"/>
+	            <img src="files/mockup/mockup6.svg" id="item-6" width="240px"/>
+	            <img src="files/mockup/mockup7.svg" id="item-7" width="240px"/>
+	        </div>
+	    </section>
+	    <!-- video slider -->
+	    <section class="container mt-3">
+	        <div class="partner-items">
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/F37zp3-aQt0" data-target="#myModal">
+	                <img src="files/video/5.svg" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/ykaSvf5VHYQ" data-target="#myModal">
+	                <img src="files/video/6.svg" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/1kIq_fBeF7k&t=5s" data-target="#myModal">
+	                <img src="files/video/7.svg" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/F37zp3-aQt0" data-target="#myModal">
+	                <img src="files/video/5.svg" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/ykaSvf5VHYQ" data-target="#myModal">
+	                <img src="files/video/6.svg" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/1kIq_fBeF7k&t=5s" data-target="#myModal">
+	                <img src="files/video/7.svg" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	        </div>
+	    </section>
+	    <!-- video sider 2 -->
+	    <section class="container mt-5">
+	        <div class="partner-items">
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/8OVdDqFFrjk" data-target="#myModal">
+	                <img src="files/video/3.svg" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/PAvVm6MwJn8" data-target="#myModal">
+	                <img src="files/video/1.png" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/d9wYH78Lbw4" data-target="#myModal">
+	                <img src="files/video/4.svg" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/uwF2YSH5oRg" data-target="#myModal">
+	                <img src="files/video/2.png" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/8OVdDqFFrjk" data-target="#myModal">
+	                <img src="files/video/3.png" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/PAvVm6MwJn8" data-target="#myModal">
+	                <img src="files/video/1.png" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	            <div>
+	                <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/d9wYH78Lbw4" data-target="#myModal">
+	                <img src="files/video/4.svg" width="100%" class="border-rad-14">
+	                </a>
+	            </div>
+	        </div>
+	    </section>
+	    <!-- download app -->
+	    <section class="container mt-5">
+	        <div class="row" align="center">
+	            <div class="col-12 align-items-center px-0">
+	                <img src="files/play.png" class="pr-md-3" width="6%">
+	                <a href="https://play.google.com/store/apps/details?id=com.intspvt.app.dehaat2&hl=en_IN&gl=US" target="_blank" class="font-weight-bold text-dark">Download DeHaat Partner Business App</a>
+	            </div>
+	        </div>
+	        <div class="text-dark font-weight-bold px-3" align="center">देहात पार्टनर ऐप के माध्यम से अपने कृषि व्यापार को दें नई रफ़्तार</div>
+	    </section>
+	    <!-- logo slider -->
+	    <section class="container mt-5">
+	        <h2 align="center">हमारे सहयोगी</h2>
+	        <div class="logo-items mt-3">
+	            <div><img src="files/logo/1.svg" class="d-block mx-auto px-4" width="100%"></div>
+	            <div><img src="files/logo/2.svg" class="d-block mx-auto px-4" width="100%"></div>
+	            <div><img src="files/logo/3.svg" class="d-block mx-auto px-4" width="100%"></div>
+	            <div><img src="files/logo/4.svg" class="d-block mx-auto px-4" width="100%"></div>
+	            <div><img src="files/logo/5.svg" class="d-block mx-auto px-4" width="100%"></div>
+	            <div><img src="files/logo/6.svg" class="d-block mx-auto px-4" width="100%"></div>
+	            <div><img src="files/logo/7.svg" class="d-block mx-auto px-4" width="100%"></div>
+	            <div><img src="files/logo/8.svg" class="d-block mx-auto px-4" width="100%"></div>
+	            <div><img src="files/logo/9.svg" class="d-block mx-auto px-4" width="100%"></div>
+	        </div>
+	    </section>
+	    <!-- testimonial -->
+	    <section class="mt-4">
+	        <h2 align="center">देहात की कहानी कृषि व्यापारियों की जुबानी</h2>
+	        <div class="container">
+	            <div class="carousel3-mobile">
+	                <div class="box bg-yellow border-rad-14 px-4 py-3">
+	                    <div class="row d-flex">
+	                        <div class="col-md-3 col-3">
+	                            <img src="files/testimonials2.svg" class="pr-0 pt-1 pl-0" width="100%">
+	                        </div>
+	                        <div class="col-md-9 col-9 hindi text-black font-weight-bold" style="font-size: 13px;">
+	                            राजेंद्र प्रसाद<br>सुजल कृषि केंद्र<br>हज़ारीबाग, झारखंड
+	                        </div>
+	                        <div class="col-md-12 col-12 hindi bold font-12 pt-2">
+	                            “POS मशीन के द्वारा व्यापार करने से , हिसाब किताब में समय की बचत ,एवं किसान को भी खरीद की पक्की रसीद”
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="box bg-yellow border-rad-14 px-4 py-3">
+	                    <div class="row d-flex">
+	                        <div class="col-md-3 col-3">
+	                            <img src="files/testimonials1.svg" class="pr-0 pt-1 pl-0" width="100%">
+	                        </div>
+	                        <div class="col-md-9 col-9 hindi text-black font-weight-bold" style="font-size: 13px;">
+	                            अरुण कुमार<br>नीरज खाद बीज भंडार<br>छौड़ादानो,पूर्वी चंपारण,बिहार
+	                        </div>
+	                        <div class="col-md-12 col-12 hindi bold font-12 pt-2">
+	                            “देहात बिज़नेस ऐप के जरिए, खाद, बीज के आर्डर में हुई आसानी। समय पर डिलीवरी और घर बैठे ही सफल भुगतान।”
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="box bg-yellow border-rad-14 px-4 py-3">
+	                    <div class="row d-flex">
+	                        <div class="col-md-3 col-3">
+	                            <img src="files/testimonials2.svg" class="pr-0 pt-1 pl-0" width="100%">
+	                        </div>
+	                        <div class="col-md-9 col-9 hindi text-black font-weight-bold" style="font-size: 13px;">
+	                            राजेंद्र प्रसाद<br>सुजल कृषि केंद्र<br>हज़ारीबाग, झारखंड
+	                        </div>
+	                        <div class="col-md-12 col-12 hindi bold font-12 pt-2">
+	                            “POS मशीन के द्वारा व्यापार करने से , हिसाब किताब में समय की बचत ,एवं किसान को भी खरीद की पक्की रसीद”
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="box bg-yellow border-rad-14 px-4 py-3">
+	                    <div class="row d-flex">
+	                        <div class="col-md-3 col-3">
+	                            <img src="files/testimonials1.svg" class="pr-0 pt-1 pl-0" width="100%">
+	                        </div>
+	                        <div class="col-md-9 col-9 hindi text-black font-weight-bold" style="font-size: 13px;">
+	                            अरुण कुमार<br>नीरज खाद बीज भंडार<br>छौड़ादानो,पूर्वी चंपारण,बिहार
+	                        </div>
+	                        <div class="col-md-12 col-12 hindi bold font-12 pt-2">
+	                            “देहात बिज़नेस ऐप के जरिए, खाद, बीज के आर्डर में हुई आसानी। समय पर डिलीवरी और घर बैठे ही सफल भुगतान।”
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	    <!-- footer -->
+	    <div class="bg-dark w-100 py-4 mt-5 pb-xs-5">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-2 col-12" align="center">
+	                    <img src="/files/icons/logo-hindi.svg" width="100px" width="d-block mx-auto">
+	                </div>
+	                <div class="col-md-5 col-12" align="center">
+	                    <ul class="navbar-nav">
+	                        <li class="nav-item"><a href="callto:1800 1036 110" class="nav-link text-white"> 1800 1036 110</a></li>
+	                        <li class="nav-item"><a href="mailto:contact@agrevolution.in" class="nav-link text-white"> contact@agrevolution.in</a></li>
+	                    </ul>
+	                </div>
+	                <div class="col-md-5 pt-2 col-12 align-items-center d-flex justify-content-center" align="center">
+	                    <a href="https://agrevolution.in/privacy-policy" target="_blank" class="text-light" >Privacy Policy</a>
+	                    <a class="text-light px-3"> | </a>
+	                    <a href="https://agrevolution.in/terms_&_condition" target="_blank" class="text-light">Terms & Condition</a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <!-- partner modal -->
+	    <div class="modal fade" id="partner1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	            <div class="modal-content">
+	                <div class="modal-body">
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">&times;</span>
+	                    </button>        
+	                    <!-- 16:9 aspect ratio -->
+	                    <div class="">
+	                        <img src="files/partner/partner1.jpeg" width="100%" class="border-rad-14">
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="modal fade" id="partner2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	            <div class="modal-content">
+	                <div class="modal-body">
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">&times;</span>
+	                    </button>        
+	                    <!-- 16:9 aspect ratio -->
+	                    <div class="">
+	                        <img src="files/partner/partner2.jpeg" width="100%" class="border-rad-14">
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="modal fade" id="partner3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	            <div class="modal-content">
+	                <div class="modal-body">
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">&times;</span>
+	                    </button>        
+	                    <!-- 16:9 aspect ratio -->
+	                    <div class="">
+	                        <img src="files/partner/partner3.jpeg" width="100%" class="border-rad-14">
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="modal fade" id="partner4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	            <div class="modal-content">
+	                <div class="modal-body">
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">&times;</span>
+	                    </button>        
+	                    <!-- 16:9 aspect ratio -->
+	                    <div class="">
+	                        <img src="files/partner/partner4.jpeg" width="100%" class="border-rad-14">
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <!-- Modal -->
+	    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	            <div class="modal-content">
+	                <div class="modal-body">
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">&times;</span>
+	                    </button>        
+	                    <!-- 16:9 aspect ratio -->
+	                    <div class="embed-responsive embed-responsive-16by9">
+	                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <!-- floating card -->
+	    <div id="float-card">
+	        <a class="close-float-card">
+	        <img src="files/cros.png" width="30px" class="close-float-card-img">
+	        </a>
+	        <div class="card bg-green-dark border-rad-14 pt-3" style="width: 140px;">
+	            <a href="#" class="lead-form text-green2 hindi font-w-500" data-toggle="modal" data-target="#lead-form">
+	                <img src="files/chacha.png" class="d-block mx-auto" width="62%">
+	                <div class="bg-brown p-3" align="center">
+	                    <div class="text-white bold card-bottom-txt hindi font-w-500">आइए, रजिस्टर करें</div>
+	                </div>
+	            </a>
+	        </div>
+	    </div>
+	    <!-- floating button on bottom -->
+	    <div class="sticky-footer bg-white w-100" style="display: none;">
+	        <a href="#" class="lead-form" data-toggle="modal" data-target="#lead-form">
+	            <div class="bg-success text-white py-2 d-flex justify-content-center" align="center" style="border: 3px solid #fff;border-radius: 6px;">
+	                <div class="align-items-center d-flex pl-3">
+	                    <img src="files/Pnz7w87-red-circle-clipart-removebg-preview.png" class="img-fluid d-flex align-items-center blink" height="10px" width="10px">
+	                </div>
+	                देहात पार्टनर बने
+	            </div>
+	        </a>
+	    </div>
+	    <!-- lead form -->
+	    <div class="modal fade" id="lead-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 9999;">
+	        <div class="modal-dialog" role="document" style="top: 5% !important;">
+	            <div class="modal-content">
+	                <a type="button" data-dismiss="modal" class="close close-float-card-reg" style="opacity:1;">
+	                <img src="files/cros.png" width="35px" class="close-float-card-img-reg">
+	                </a>
+	                <div class="modal-body">
+	                    <div class="card py-5">
+	                        <iframe src="https://forms.zohopublic.in/DeHaat/form/MEOnboardingLandingPage/formperma/I9T2erFO1DfnYn3dvsZHfds1ZU1bcE8nKezH-JZV3mk" style="width:100%;height:90vh;border:none;"></iframe>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+
+
+   <!-- counter -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+   <script>
+      $(".counter").counterUp({
+         delay: 10,
+         time: 2000
+      });
+      $(".counter").addClass("animated fadeInDownBig");
+   </script>
+
+   <!-- JQuery -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script> -->
+
+   <!-- waterwheel carousel -->
+   <script>
+      /*!
+       * Waterwheel Carousel
+       * Version 2.3.0
+       * http://www.bkosborne.com
+       *
+       * Copyright 2011-2013 Brian Osborne
+       * Dual licensed under GPLv3 or MIT
+       * Copies of the licenses have been distributed
+       * with this plugin.
+       *
+       * Plugin written by Brian Osborne
+       * for use with the jQuery JavaScript Framework
+       * http://www.jquery.com
+       */
+      ;(function ($) {
+        'use strict';
+
+        $.fn.waterwheelCarousel = function (startingOptions) {
+
+          // Adds support for intializing multiple carousels from the same selector group
+          if (this.length > 1) {
+            this.each(function() {
+              $(this).waterwheelCarousel(startingOptions);
+            });
+            return this; // allow chaining
+          }
+
+          var carousel = this;
+          var options = {};
+          var data = {};
+
+          function initializeCarouselData() {
+            data = {
+              itemsContainer:         $(carousel),
+              totalItems:             $(carousel).find('img').length,
+              containerWidth:         $(carousel).width(),
+              containerHeight:        $(carousel).height(),
+              currentCenterItem:      null,
+              previousCenterItem:     null,
+              items:                  [],
+              calculations:           [],
+              carouselRotationsLeft:  0,
+              currentlyMoving:        false,
+              itemsAnimating:         0,
+              currentSpeed:           options.speed,
+              intervalTimer:          null,
+              currentDirection:       'forward',
+              leftItemsCount:         0,
+              rightItemsCount:        0,
+              performingSetup:        true
+            };
+            data.itemsContainer.find('img').removeClass(options.activeClassName);
+          }
+
+          /**
+           * This function will set the autoplay for the carousel to
+           * automatically rotate it given the time in the options
+           * Can clear the autoplay by passing in true
+           */
+          function autoPlay(stop) {
+            // clear timer
+            clearTimeout(data.autoPlayTimer);
+            // as long as no stop command, and autoplay isn't zeroed...
+            if (!stop && options.autoPlay !== 0) {
+              // set timer...
+              data.autoPlayTimer = setTimeout(function () {
+                // to move the carousl in either direction...
+                if (options.autoPlay > 0) {
+                  moveOnce('forward');
+                } else {
+                  moveOnce('backward');
+                }
+              }, Math.abs(options.autoPlay));
+            }
+          }
+
+          /**
+           * This function will preload all the images in the carousel before
+           * calling the passed in callback function. This is only used so we can
+           * properly determine the width and height of the items. This is not needed
+           * if a user instead manually specifies that information.
+           */
+          function preload(callback) {
+            if (options.preloadImages === false) {
+              callback();
+              return;
+            }
+
+            var $imageElements = data.itemsContainer.find('img'), loadedImages = 0, totalImages = $imageElements.length;
+
+            $imageElements.each(function () {
+              $(this).bind('load', function () {
+                // Add to number of images loaded and see if they are all done yet
+                loadedImages += 1;
+                if (loadedImages === totalImages) {
+                  // All done, perform callback
+                  callback();
+                  return;
+                }
+              });
+              // May need to manually reset the src to get the load event to fire
+              // http://stackoverflow.com/questions/7137737/ie9-problems-with-jquery-load-event-not-firing
+              $(this).attr('src', $(this).attr('src'));
+
+              // If browser has cached the images, it may not call trigger a load. Detect this and do it ourselves
+              if (this.complete) {
+                $(this).trigger('load');
+              }
+            });
+          }
+
+          /**
+           * Makes a record of the original width and height of all the items in the carousel.
+           * If we re-intialize the carousel, these values can be used to re-establish their
+           * original dimensions.
+           */
+          function setOriginalItemDimensions() {
+            data.itemsContainer.find('img').each(function () {
+              if ($(this).data('original_width') == undefined || options.forcedImageWidth > 0) {
+                $(this).data('original_width', $(this).width());
+              }
+              if ($(this).data('original_height') == undefined || options.forcedImageHeight > 0) {
+                $(this).data('original_height', $(this).height());
+              }
+            });
+          }
+
+          /**
+           * Users can pass in a specific width and height that should be applied to every image.
+           * While this option can be used in conjunction with the image preloader, the intended
+           * use case is for when the preloader is turned off and the images don't have defined
+           * dimensions in CSS. The carousel needs dimensions one way or another to work properly.
+           */
+          function forceImageDimensionsIfEnabled() {
+            if (options.forcedImageWidth && options.forcedImageHeight) {
+              data.itemsContainer.find('img').each(function () {
+                $(this).width(options.forcedImageWidth);
+                $(this).height(options.forcedImageHeight);
+              });
+            }
+          }
+
+          /**
+           * For each "visible" item slot (# of flanking items plus the middle),
+           * we pre-calculate all of the properties that the item should possess while
+           * occupying that slot. This saves us some time during the actual animation.
+           */
+          function preCalculatePositionProperties() {
+            // The 0 index is the center item in the carousel
+            var $firstItem = data.itemsContainer.find('img:first');
+
+            data.calculations[0] = {
+              distance: 0,
+              offset:   0,
+              opacity:  1
+            }
+
+            // Then, for each number of flanking items (plus one more, see below), we
+            // perform the calcations based on our user options
+            var horizonOffset = options.horizonOffset;
+            var separation = options.separation;
+            for (var i = 1; i <= options.flankingItems + 2; i++) {
+              if (i > 1) {
+                horizonOffset *= options.horizonOffsetMultiplier;
+                separation *= options.separationMultiplier;
+              }
+              data.calculations[i] = {
+                distance: data.calculations[i-1].distance + separation,
+                offset:   data.calculations[i-1].offset + horizonOffset,
+                opacity:  data.calculations[i-1].opacity * options.opacityMultiplier
+              }
+            }
+            // We performed 1 extra set of calculations above so that the items that
+            // are moving out of sight (based on # of flanking items) gracefully animate there
+            // However, we need them to animate to hidden, so we set the opacity to 0 for
+            // that last item
+            if (options.edgeFadeEnabled) {
+              data.calculations[options.flankingItems+1].opacity = 0;
+            } else {
+              data.calculations[options.flankingItems+1] = {
+                distance: 0,
+                offset: 0,
+                opacity: 0
+              }
+            }
+          }
+
+          /**
+           * Here we prep the carousel and its items, like setting default CSS
+           * attributes. All items start in the middle position by default
+           * and will "fan out" from there during the first animation
+           */
+          function setupCarousel() {
+            // Fill in a data array with jQuery objects of all the images
+            data.items = data.itemsContainer.find('img');
+            for (var i = 0; i < data.totalItems; i++) {
+              data.items[i] = $(data.items[i]);
+            }
+
+            // May need to set the horizon if it was set to auto
+            if (options.horizon === 0) {
+              if (options.orientation === 'horizontal') {
+                options.horizon = data.containerHeight / 2;
+              } else {
+                options.horizon = data.containerWidth / 2;
+              }
+            }
+
+            // Default all the items to the center position
+            data.itemsContainer
+              .css('position','relative')
+              .find('img')
+                .each(function () {
+                  // Figure out where the top and left positions for center should be
+                  var centerPosLeft, centerPosTop;
+                  if (options.orientation === 'horizontal') {
+                    centerPosLeft = (data.containerWidth / 2) - ($(this).data('original_width') / 2);
+                    centerPosTop = options.horizon - ($(this).data('original_height') / 2);
+                  } else {
+                    centerPosLeft = options.horizon - ($(this).data('original_width') / 2);
+                    centerPosTop = (data.containerHeight / 2) - ($(this).data('original_height') / 2);
+                  }
+                  $(this)
+                    // Apply positioning and layering to the images
+                    .css({
+                      'left': centerPosLeft,
+                      'top': centerPosTop,
+                      'visibility': 'visible',
+                      'position': 'absolute',
+                      'z-index': 0,
+                      'opacity': 0
+                    })
+                    // Give each image a data object so it remembers specific data about
+                    // it's original form
+                    .data({
+                      top:             centerPosTop,
+                      left:            centerPosLeft,
+                      oldPosition:     0,
+                      currentPosition: 0,
+                      depth:           0,
+                      opacity:         0
+                    })
+                    // The image has been setup... Now we can show it
+                    .show();
+                });
+          }
+
+          /**
+           * All the items to the left and right of the center item need to be
+           * animated to their starting positions. This function will
+           * figure out what items go where and will animate them there
+           */
+          function setupStarterRotation() {
+            options.startingItem = (options.startingItem === 0) ? Math.round(data.totalItems / 2) : options.startingItem;
+
+            data.rightItemsCount = Math.ceil((data.totalItems-1) / 2);
+            data.leftItemsCount = Math.floor((data.totalItems-1) / 2);
+
+            // We are in effect rotating the carousel, so we need to set that
+            data.carouselRotationsLeft = 1;
+
+            // Center item
+            moveItem(data.items[options.startingItem-1], 0);
+            data.items[options.startingItem-1].css('opacity', 1);
+
+            // All the items to the right of center
+            var itemIndex = options.startingItem - 1;
+            for (var pos = 1; pos <= data.rightItemsCount; pos++) {
+              (itemIndex < data.totalItems - 1) ? itemIndex += 1 : itemIndex = 0;
+
+              data.items[itemIndex].css('opacity', 1);
+              moveItem(data.items[itemIndex], pos);
+            }
+
+            // All items to left of center
+            var itemIndex = options.startingItem - 1;
+            for (var pos = -1; pos >= data.leftItemsCount*-1; pos--) {
+              (itemIndex > 0) ? itemIndex -= 1 : itemIndex = data.totalItems - 1;
+
+              data.items[itemIndex].css('opacity', 1);
+              moveItem(data.items[itemIndex], pos);
+            }
+          }
+
+          /**
+           * Given the item and position, this function will calculate the new data
+           * for the item. One the calculations are done, it will store that data in
+           * the items data object
+           */
+          function performCalculations($item, newPosition) {
+            var newDistanceFromCenter = Math.abs(newPosition);
+
+            // Distance to the center
+            if (newDistanceFromCenter < options.flankingItems + 1) {
+              var calculations = data.calculations[newDistanceFromCenter];
+            } else {
+              var calculations = data.calculations[options.flankingItems + 1];
+            }
+
+            var distanceFactor = Math.pow(options.sizeMultiplier, newDistanceFromCenter)
+            var newWidth = distanceFactor * $item.data('original_width');
+            var newHeight = distanceFactor * $item.data('original_height');
+            var widthDifference = Math.abs($item.width() - newWidth);
+            var heightDifference = Math.abs($item.height() - newHeight);
+
+            var newOffset = calculations.offset
+            var newDistance = calculations.distance;
+            if (newPosition < 0) {
+              newDistance *= -1;
+            }
+
+            if (options.orientation == 'horizontal') {
+              var center = data.containerWidth / 2;
+              var newLeft = center + newDistance - (newWidth / 2);
+              var newTop = options.horizon - newOffset - (newHeight / 2);
+            } else {
+              var center = data.containerHeight / 2;
+              var newLeft = options.horizon - newOffset - (newWidth / 2);
+              var newTop = center + newDistance - (newHeight / 2);
+            }
+
+            var newOpacity;
+            if (newPosition === 0) {
+              newOpacity = 1;
+            } else {
+              newOpacity = calculations.opacity;
+            }
+
+            // Depth will be reverse distance from center
+            var newDepth = options.flankingItems + 2 - newDistanceFromCenter;
+
+            $item.data('width',newWidth);
+            $item.data('height',newHeight);
+            $item.data('top',newTop);
+            $item.data('left',newLeft);
+            $item.data('oldPosition',$item.data('currentPosition'));
+            $item.data('depth',newDepth);
+            $item.data('opacity',newOpacity);
+          }
+
+          function moveItem($item, newPosition) {
+            // Only want to physically move the item if it is within the boundaries
+            // or in the first position just outside either boundary
+            if (Math.abs(newPosition) <= options.flankingItems + 1) {
+              performCalculations($item, newPosition);
+
+              data.itemsAnimating++;
+
+              $item
+                .css('z-index',$item.data().depth)
+                // Animate the items to their new position values
+                .animate({
+                  left:    $item.data().left,
+                  width:   $item.data().width,
+                  height:  $item.data().height,
+                  top:     $item.data().top,
+                  opacity: $item.data().opacity
+                }, data.currentSpeed, options.animationEasing, function () {
+                  // Animation for the item has completed, call method
+                  itemAnimationComplete($item, newPosition);
+                });
+
+            } else {
+              $item.data('currentPosition', newPosition)
+              // Move the item to the 'hidden' position if hasn't been moved yet
+              // This is for the intitial setup
+              if ($item.data('oldPosition') === 0) {
+                $item.css({
+                  'left':    $item.data().left,
+                  'width':   $item.data().width,
+                  'height':  $item.data().height,
+                  'top':     $item.data().top,
+                  'opacity': $item.data().opacity,
+                  'z-index': $item.data().depth
+                });
+              }
+            }
+
+          }
+
+          /**
+           * This function is called once an item has finished animating to its
+           * given position. Several different statements are executed here, such as
+           * dealing with the animation queue
+           */
+          function itemAnimationComplete($item, newPosition) {
+            data.itemsAnimating--;
+
+            $item.data('currentPosition', newPosition);
+
+            // Keep track of what items came and left the center position,
+            // so we can fire callbacks when all the rotations are completed
+            if (newPosition === 0) {
+              data.currentCenterItem = $item;
+            }
+
+            // all items have finished their rotation, lets clean up
+            if (data.itemsAnimating === 0) {
+              data.carouselRotationsLeft -= 1;
+              data.currentlyMoving = false;
+
+              // If there are still rotations left in the queue, rotate the carousel again
+              // we pass in zero because we don't want to add any additional rotations
+              if (data.carouselRotationsLeft > 0) {
+                rotateCarousel(0);
+              // Otherwise there are no more rotations and...
+              } else {
+                // Reset the speed of the carousel to original
+                data.currentSpeed = options.speed;
+
+                data.currentCenterItem.addClass(options.activeClassName);
+
+                if (data.performingSetup === false) {
+                  options.movedToCenter(data.currentCenterItem);
+                  options.movedFromCenter(data.previousCenterItem);
+                }
+
+                data.performingSetup = false;
+                // reset & initate the autoPlay
+                autoPlay();
+              }
+            }
+          }
+
+          /**
+           * Function called to rotate the carousel the given number of rotations
+           * in the given direciton. Will check to make sure the carousel should
+           * be able to move, and then adjust speed and move items
+           */
+          function rotateCarousel(rotations) {
+            // Check to see that a rotation is allowed
+            if (data.currentlyMoving === false) {
+
+              // Remove active class from the center item while we rotate
+              data.currentCenterItem.removeClass(options.activeClassName);
+
+              data.currentlyMoving = true;
+              data.itemsAnimating = 0;
+              data.carouselRotationsLeft += rotations;
+              
+              if (options.quickerForFurther === true) {
+                // Figure out how fast the carousel should rotate
+                if (rotations > 1) {
+                  data.currentSpeed = options.speed / rotations;
+                }
+                // Assure the speed is above the minimum to avoid weird results
+                data.currentSpeed = (data.currentSpeed < 100) ? 100 : data.currentSpeed;
+              }
+
+              // Iterate thru each item and move it
+              for (var i = 0; i < data.totalItems; i++) {
+                var $item = $(data.items[i]);
+                var currentPosition = $item.data('currentPosition');
+
+                var newPosition;
+                if (data.currentDirection == 'forward') {
+                  newPosition = currentPosition - 1;
+                } else {
+                  newPosition = currentPosition + 1;
+                }
+                // We keep both sides as even as possible to allow circular rotation to work.
+                // We will "wrap" the item arround to the other side by negating its current position
+                var flankingAllowance = (newPosition > 0) ? data.rightItemsCount : data.leftItemsCount;
+                if (Math.abs(newPosition) > flankingAllowance) {
+                  newPosition = currentPosition * -1;
+                  // If there's an uneven number of "flanking" items, we need to compenstate for that
+                  // when we have an item switch sides. The right side will always have 1 more in that case
+                  if (data.totalItems % 2 == 0) {
+                    newPosition += 1;
+                  } 
+                }
+
+                moveItem($item, newPosition);
+              }
+            }
+          }
+
+          /**
+           * The event handler when an image within the carousel is clicked
+           * This function will rotate the carousel the correct number of rotations
+           * to get the clicked item to the center, or will fire the custom event
+           * the user passed in if the center item is clicked
+           */
+          $(this).find('img').bind("click", function () {
+            var itemPosition = $(this).data().currentPosition;
+
+            if (options.imageNav == false) {
+              return;
+            }
+            // Don't allow hidden items to be clicked
+            if (Math.abs(itemPosition) >= options.flankingItems + 1) {
+              return;
+            }
+            // Do nothing if the carousel is already moving
+            if (data.currentlyMoving) {
+              return;
+            }
+
+            data.previousCenterItem = data.currentCenterItem;
+
+            // Remove autoplay
+            autoPlay(true);
+            options.autoPlay = 0;
+            
+            var rotations = Math.abs(itemPosition);
+            if (itemPosition == 0) {
+              options.clickedCenter($(this));
+            } else {
+              // Fire the 'moving' callbacks
+              options.movingFromCenter(data.currentCenterItem);
+              options.movingToCenter($(this));
+              if (itemPosition < 0) {
+                data.currentDirection = 'backward';
+                rotateCarousel(rotations);
+              } else if (itemPosition > 0) {
+                data.currentDirection = 'forward';
+                rotateCarousel(rotations);
+              }
+            }
+          });
+
+
+          /**
+           * The user may choose to wrap the images is link tags. If they do this, we need to
+           * make sure that they aren't active for certain situations
+           */
+          $(this).find('a').bind("click", function (event) {
+            var isCenter = $(this).find('img').data('currentPosition') == 0;
+            // should we disable the links?
+            if (options.linkHandling === 1 || // turn off all links
+                (options.linkHandling === 2 && !isCenter)) // turn off all links except center
+            {
+              event.preventDefault();
+              return false;
+            }
+          });
+
+          function nextItemFromCenter() {
+            var $next = data.currentCenterItem.next();
+            if ($next.length <= 0) {
+              $next = data.currentCenterItem.parent().children().first();
+            }
+            return $next;
+          }
+
+          function prevItemFromCenter() {
+            var $prev = data.currentCenterItem.prev();
+            if ($prev.length <= 0) {
+              $prev = data.currentCenterItem.parent().children().last();
+            }
+            return $prev;
+          }
+
+          /**
+           * Intiate a move of the carousel in either direction. Takes care of firing
+           * the 'moving' callbacks
+           */
+          function moveOnce(direction) {
+            if (data.currentlyMoving === false) {
+              data.previousCenterItem = data.currentCenterItem;
+
+              options.movingFromCenter(data.currentCenterItem);
+              if (direction == 'backward') {
+                options.movingToCenter(prevItemFromCenter());
+                data.currentDirection = 'backward';
+              } else if (direction == 'forward') {
+                options.movingToCenter(nextItemFromCenter());
+                data.currentDirection = 'forward';
+              }
+            }
+
+            rotateCarousel(1);
+          }
+          
+          /**
+           * Navigation with arrow keys
+           */
+          $(document).keydown(function(e) {
+            if (options.keyboardNav) {
+              // arrow left or up
+              if ((e.which === 37 && options.orientation == 'horizontal') || (e.which === 38 && options.orientation == 'vertical')) {
+                autoPlay(true);
+                options.autoPlay = 0;
+                moveOnce('backward');
+              // arrow right or down
+              } else if ((e.which === 39 && options.orientation == 'horizontal') || (e.which === 40 && options.orientation == 'vertical')) {
+                autoPlay(true);
+                options.autoPlay = 0;
+                moveOnce('forward');
+              }
+              // should we override the normal functionality for the arrow keys?
+              if (options.keyboardNavOverride && (
+                  (options.orientation == 'horizontal' && (e.which === 37 || e.which === 39)) ||
+                  (options.orientation == 'vertical' && (e.which === 38 || e.which === 40))
+                )) {
+                e.preventDefault();
+                return false;
+              }
+            }
+          });
+
+          /**
+           * Public API methods
+           */
+          this.reload = function (newOptions) {
+            if (typeof newOptions === "object") {
+              var combineDefaultWith = newOptions;
+            } else {
+              var combineDefaultWith = {};
+            }
+            options = $.extend({}, $.fn.waterwheelCarousel.defaults, newOptions);
+
+            initializeCarouselData();
+            data.itemsContainer.find('img').hide();
+            forceImageDimensionsIfEnabled();
+
+            preload(function () {
+              setOriginalItemDimensions();
+              preCalculatePositionProperties();
+              setupCarousel();
+              setupStarterRotation();
+            });
+          }
+          
+          this.next = function() {
+            autoPlay(true);
+            options.autoPlay = 0;
+
+            moveOnce('forward');
+          }
+          this.prev = function () {
+            autoPlay(true);
+            options.autoPlay = 0;
+
+            moveOnce('backward');
+          }
+
+          this.reload(startingOptions);
+
+          return this;
+        };
+
+        $.fn.waterwheelCarousel.defaults = {
+          // number tweeks to change apperance
+          startingItem:               1,   // item to place in the center of the carousel. Set to 0 for auto
+          separation:                 175, // distance between items in carousel
+          separationMultiplier:       0.6, // multipled by separation distance to increase/decrease distance for each additional item
+          horizonOffset:              0,   // offset each item from the "horizon" by this amount (causes arching)
+          horizonOffsetMultiplier:    1,   // multipled by horizon offset to increase/decrease offset for each additional item
+          sizeMultiplier:             0.7, // determines how drastically the size of each item changes
+          opacityMultiplier:          0.8, // determines how drastically the opacity of each item changes
+          horizon:                    0,   // how "far in" the horizontal/vertical horizon should be set from the container wall. 0 for auto
+          flankingItems:              3,   // the number of items visible on either side of the center                  
+
+          // animation
+          speed:                      300,      // speed in milliseconds it will take to rotate from one to the next
+          animationEasing:            'linear', // the easing effect to use when animating
+          quickerForFurther:          true,     // set to true to make animations faster when clicking an item that is far away from the center
+          edgeFadeEnabled:            false,    // when true, items fade off into nothingness when reaching the edge. false to have them move behind the center image
+          
+          // misc
+          linkHandling:               2,                 // 1 to disable all (used for facebox), 2 to disable all but center (to link images out)
+          autoPlay:                   0,                 // indicate the speed in milliseconds to wait before autorotating. 0 to turn off. Can be negative
+          orientation:                'horizontal',      // indicate if the carousel should be 'horizontal' or 'vertical'
+          activeClassName:            'carousel-center', // the name of the class given to the current item in the center
+          keyboardNav:                false,             // set to true to move the carousel with the arrow keys
+          keyboardNavOverride:        true,              // set to true to override the normal functionality of the arrow keys (prevents scrolling)
+          imageNav:                   true,              // clicking a non-center image will rotate that image to the center
+
+          // preloader
+          preloadImages:              true,  // disable/enable the image preloader. 
+          forcedImageWidth:           0,     // specify width of all images; otherwise the carousel tries to calculate it
+          forcedImageHeight:          0,     // specify height of all images; otherwise the carousel tries to calculate it
+
+          // callback functions
+          movingToCenter:             $.noop, // fired when an item is about to move to the center position
+          movedToCenter:              $.noop, // fired when an item has finished moving to the center
+          clickedCenter:              $.noop, // fired when the center item has been clicked
+          movingFromCenter:           $.noop, // fired when an item is about to leave the center position
+          movedFromCenter:            $.noop  // fired when an item has finished moving from the center
+        };
+
+      })(jQuery);
+   </script>
+   <script type="text/javascript">
+      $(document).ready(function () {
+        var carousel = $("#carousel").waterwheelCarousel({
+          flankingItems: 3,
+        });
+      });
+   </script>
+   <!-- slick slider -->
+   <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <!-- media script for slick slider -->
+   <script>
+      // desktop
+      $(document).ready(function(){
+        if(window.matchMedia('(max-width: 767px)').matches) {
+          $('.partner-items').slick({
+            infinite: true,
+            variableWidth: true,
+            swipe: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+               {
+                  breakpoint: 1200,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 1008,
+                  settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 800,
+                  settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1
+                  }
+               }
+            ]
+          });
+          $('.logo-items').slick({
+            infinite: true,
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 3000,
+            pauseOnHover: false,
+            swipe: false,
+            cssEase: 'linear',
+            responsive: [
+               {
+                  breakpoint: 1200,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 1008,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 800,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               }
+            ]
+          });
+          $('.carousel3-mobile').slick({
+            infinite: true,
+            variableWidth: true,
+            swipe: true,      
+            arrows: false,
+            dots: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [{
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 1
+            }
+            }, {
+               breakpoint: 520,
+               settings: {
+                   slidesToShow: 1
+               }
+            }]
+          });
+          $('.video-link-items').slick({
+            infinite: true,
+            slidesToShow: 3,
+            speed: 300,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToScroll: 1,
+            responsive: [
+               {
+                  breakpoint: 1200,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 1008,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 800,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               }
+            ]
+          });
+          $('.close-float-card').click(function() {
+                $('#float-card').hide(500);
+                $('.sticky-footer').show(500);
+            });
+        }else {
+          $('.partner-items').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+               {
+                  breakpoint: 1200,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 1008,
+                  settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 800,
+                  settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1
+                  }
+               }
+            ]
+          });
+          $('.logo-items').slick({
+            infinite: true,
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 3000,
+            pauseOnHover: false,
+            swipe: false,
+            cssEase: 'linear',
+            responsive: [
+               {
+                  breakpoint: 1200,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 1008,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 800,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               }
+            ]
+          });
+          $('.carousel3-mobile').slick({
+            infinite: true,
+            variableWidth: false,
+            swipe: false,      
+            arrows: false,
+            dots: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            swipe: true,
+            responsive: [{
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 1
+            }
+            }, {
+               breakpoint: 520,
+               settings: {
+                   slidesToShow: 1
+               }
+            }]
+          });
+          $('.video-link-items').slick({
+            infinite: true,
+            slidesToShow: 3,
+            speed: 300,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToScroll: 1,
+            responsive: [
+               {
+                  breakpoint: 1200,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 1008,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               },
+               {
+                  breakpoint: 800,
+                  settings: {
+                     slidesToShow: 2,
+                     slidesToScroll: 1
+                  }
+               }
+            ]
+          });
+          $('.close-float-card').click(function() {
+                $('#float-card').hide(500);
+            });
+        } 
+      });
+   </script>
+   <!-- POS -->
+	<script>
+	$(document).ready(function(){
+	  $('.carousel-pos').slick({
+	    speed: 500,
+	    slidesToShow: 3,
+	    slidesToScroll: 1,
+	    autoplay: true,
+	    autoplaySpeed: 2000,
+	    pauseOnHover: true,
+	    pauseOnFocus: true,
+	    dots:true,
+	    centerMode: true,
+	    responsive: [{
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 1,
+	      }
+
+	    }, {
+	      breakpoint: 800,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        dots: true,
+	        infinite: true,
+	      }
+	    },  {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        dots: true,
+	        infinite: true,
+	        autoplay: true,
+	        autoplaySpeed: 2000,
+	      }
+	    }]
+	  });
+	});
+	</script>
+
+   <!-- open video youtube -->
+   <script>
+      $(document).ready(function() {
+      var $videoSrc;  
+      $('.video-btn').click(function() {
+          $videoSrc = $(this).data( "src" );
+      });
+      console.log($videoSrc);
+        
+      // when the modal is opened autoplay it  
+      $('#myModal').on('shown.bs.modal', function (e) {
+          
+      // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+      $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+      });
+
+      // stop playing the youtube video when I close the modal
+      $('#myModal').on('hide.bs.modal', function (e) {
+          // a poor man's stop video
+          $("#video").attr('src',$videoSrc);
+      });
+      });
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------ dehaat-terminal ------------------------------------------------>
+	<section class="dehaat-terminal" style="display:none;">
+	    <nav class="navbar navbar-light bg-white">
+	        <div class="container">
+	            <a class="navbar-brand" href="#"><img src="image/logo-inner.svg" class="img-fluid h-75 w-75"></a>
+	        </div>
+	    </nav>
+	    <section class="container" style="max-width: 650px;">
+	        <div class="row">
+	            <div class="col-12" align="center">
+	                <img src="image/lifestyle-banner.svg" width="100%" class="d-block mx-auto">
+	                <h2 class="font-weight-bold text-success">ऑल-इन-वन देहात टर्मिनल</h2>
+	                <h4 class="font-weight-bold text-black">आर्डर, बिलिंग एवं भुगतान का सर्वोत्तम समाधान !</h4>
+	            </div>
+	        </div>
+	    </section>
+	    <!-- tab and pill -->
+	    <section class="pb-5">
+	        <div class="container pt-5">
+	            <h2 class="font-weight-bold text-black pt-5" align="center">
+	                बनाओ अपना व्यापार भविष्य के लिए तैयार
+	            </h2>
+	        </div>
+	        <div class="wrapper">
+	            <div class="carousel-pos">
+	                <div>
+	                    <div class="pb-3" style="box-shadow: 3px 3px 4px #ccc;border-radius: 8px;">
+	                        <div class="">
+	                            <img src="image/banner-payments.svg" class="img-fluid">
+	                        </div>
+	                        <div class="">
+	                            <h4 class="font-weight-bold my-2 text-black pt-3">
+	                                <span class="font-weight-bold text-white pt-3 px-3" style="font-size: 40px;text-shadow: 3px 3px 4px #4caf50;">01.</span>
+	                                देहात टर्मिनल के साथ व्यवस्थित करें अपना कृषि व्यापार
+	                            </h4>
+	                            <p class="mt-4">
+	                                <button type="button" class="btn btn-collapse" data-toggle="collapse" data-target="#collapse1">Read More <i class="pl-2 fas fa-chevron-down"></i> </button>
+	                            <div id="collapse1" class="collapse">
+	                                <ul>
+	                                    <li>सभी तरह के भुगतान माध्यम के लिए उपलब्ध (डेबिट कार्ड/क्रेडिट कार्ड/यूपीआई ) </li>
+	                                    <li>आर्डर, बिलिंग और भुगतान के लिए एक ही मशीन </li>
+	                                    <li>एक जगह पर व्यापार का सारा हिसाब (दिन/महीने/ साल)</li>
+	                                    <li>तत्काल बैंक सेटेलमेंट</li>
+	                                    <li>बिलिंग के लिए इनबिल्ट प्रिंटर</li>
+	                                    <li>भुगतान प्राप्त करने के लिए इन-बिल्ट आईएमइआई /बारकोड स्कैनर</li>
+	                                    <li>4G कनेक्टिविटी के साथ तेज लेनदेन</li>
+	                                    <li>एंड्रॉइड आधारित टर्मिनल के साथ टचस्क्रीन डिस्प्ले</li>
+	                                    <li>प्रयोग में आसान </li>
+	                                    <li>बैटरी संचालित (सिंगल चार्जिंग पर लंबा बैकअप) </li>
+	                                </ul>
+	                            </div>
+	                            </p>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div>
+	                    <div class="pb-3" style="box-shadow: 3px 3px 4px #ccc;border-radius: 8px;">
+	                        <div class="">
+	                            <img src="image/cardless-emi-banner.png" class="img-fluid">
+	                        </div>
+	                        <div class="">
+	                            <h4 class="font-weight-bold my-2 text-black pt-3">
+	                                <span class="font-weight-bold text-white pt-3 px-3" style="font-size: 40px;text-shadow: 3px 3px 4px #4caf50;">02.</span>
+	                                आपके केंद्र में देहात टर्मिनल होने के फायदे
+	                            </h4>
+	                            <p class="mt-4">
+	                                <button type="button" class="btn btn-collapse" data-toggle="collapse" data-target="#collapse2">Read More <i class="pl-2 fas fa-chevron-down"></i> </button>
+	                            <div id="collapse2" class="collapse">
+	                                <ul>
+	                                    <li>टर्मिनल से ही देहात में आर्डर लगाने एवं भुगतान की सुविधा </li>
+	                                    <li>किसानों के रिकॉर्ड का प्रबंधन </li>
+	                                    <li>एक क्लिक पर किसानों से भुगतान प्राप्ति  (डेबिट कार्ड/क्रेडिट कार्ड/यूपीआई ) </li>
+	                                    <li>प्रिंटेड बिलिंग </li>
+	                                    <li>लेन-देन के हिसाब पर निगरानी </li>
+	                                    <li>बही-खाता से मुक्ति</li>
+	                                    <li>स्टॉक एवं उत्पादों का बेहतर मैनेजमेंट</li>
+	                                    <li>करों एवं भुगतान का प्रबंधन </li>
+	                                    <li>बकाया भुगतान के लिए किसानों को SMS एवं पेमेंट लिंक भेजने कि सुविधा</li>
+	                                </ul>
+	                            </div>
+	                            </p>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div>
+	                    <div class="pb-3" style="box-shadow: 3px 3px 4px #ccc;border-radius: 8px;">
+	                        <div class="">
+	                            <img src="image/banner-payments.svg" class="img-fluid">
+	                        </div>
+	                        <div class="">
+	                            <h4 class="font-weight-bold my-2 text-black pt-3">
+	                                <span class="font-weight-bold text-white pt-3 px-3" style="font-size: 40px;text-shadow: 3px 3px 4px #4caf50;">03.</span>
+	                                देहात टर्मिनल की विशेषताएं
+	                            </h4>
+	                            <p class="mt-4">
+	                                <button type="button" class="btn btn-collapse" data-toggle="collapse" data-target="#collapse3">Read More <i class="pl-2 fas fa-chevron-down"></i> </button>
+	                            <div id="collapse3" class="collapse">
+	                                <ul>
+	                                    <li>भुगतान अब और भी आसान! डेबिट कार्ड | क्रेडिट कार्ड | यूपीआई |डिजिटल वॉलेट</li>
+	                                    <li>स्कैन करायें, तुरंत खाते में भुगतान पायें।</li>
+	                                    <li>टर्मिनल से,बारकोड को स्कैन कराएं,  प्रोडक्ट की सही कीमत का पता लगाएं।</li>
+	                                </ul>
+	                            </div>
+	                            </p>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	</section>
+<!------------------------------------------- dehaat-terminal-end ------------------------------------------------>
+
+
+
+    <script>
+        var link = window.location.pathname;
+        if('/dehaat-terminal.html' == link){
+            $('.dehaat-terminal').css('display','block');
+            $('.home').css('display','none');
+        }
+        if('/dehaat-terminal' == link){
+            $('.dehaat-terminal').css('display','block');
+            $('.home').css('display','none');
+        }
+        if('/zcms/editor/dehaat-terminal' == link){
+            $('.dehaat-terminal').css('display','block');
+            $('.home').css('display','none');
+        }
+        if('/fasal-beema.html' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/fasal-beema' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/zcms/editor/fasal-beema' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/big-week-sale.html' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/big-week-sale' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/zcms/editor/big-week-sale' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/dehaat-promotion.html' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/dehaat-promotion' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/zcms/editor/dehaat-promotion' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        
+        if('/promotion.html' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/promotion' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/zcms/editor/promotion' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/promotion-1.html' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/promotion-1' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/zcms/editor/promotion-1' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/promotion-2.html' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/promotion-2' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+        if('/zcms/editor/promotion-2' == link){
+            $('.dehaat-terminal').css('display','none');
+            $('.home').css('display','none');
+        }
+    </script>
+</body>
+</html>
